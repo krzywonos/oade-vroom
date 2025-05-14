@@ -1,0 +1,58 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcatap: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix prov: <https://www.w3.org/TR/prov-o/>.
+
+<DS2>
+            a   dcatap:Dataset
+                prov:Entity ;
+
+            adms:identifier  "dati-centraline-bologna-storico" ;            
+            dct:title   "Quality of air in station (historical from 2017)" ;
+            dct:description "Air quality data from 2017 to 2024, relating to the three monitoring stations located in the municipality of Bologna." ;
+
+            dcat:theme  <http://publications.europa.eu/resource/authority/data-theme/TRAN> ;
+            dct:subject <http://eurovoc.europa.eu/4806>  ;
+            dcat:keyword "transport policy"@en, "Bologna"@en ;
+            dcat:keyword  "politica dei trasporti"@it, "Bologna"@it ;
+
+            dct:modified "2024-12-31"^^xsd:date ;
+            dct:issued "2020-12-22"^^xsd:date ;
+
+            dct:rightsHolder <Comune_di_Bologna> ;
+            dct:creator <ACI> ;                        
+            dct:publisher <Comune_di_Bologna>;
+            dcat:distribution <Comune_di_Bologna> ; 
+
+            dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL>;
+
+            dct:language    <http://publications.europa.eu/resource/authority/language/ITA/> ;
+
+            dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+
+            prov:wasDerivedFrom <http://www.aci.it/laci/studi-e-ricerche/dati-e-statistiche/open-data.html>.
+          
+<http://publications.europa.eu/resource/authority/data-theme/TRAN>
+            a    skos:Concept ;
+            skos:prefLabel  "Transport"@en .
+
+<http://creativecommons.org/licenses/by/4.0/>
+            a   dct:LicenseDocument ;
+                dct:type         <http://purl.org/adms/licencetype/Attribution> ;
+                foaf:name        "CC BY" ;
+                owl:versionInfo  "4.0" .
+            
+<Comune_di_Bologna>
+			a foaf:Agent, dcat:Distribution;
+				foaf:name "Comune di Bologna";
+				dct:type <http://publications.europa.eu/resource/authority/organization-type/AUT_REG>;
+				dct:spatial <http://publications.europa.eu/resource/authority/place/ITA_BLQ>;
+				dcat:accessURL <https://opendata.comune.bologna.it/explore/dataset/parco-circolante-veicoli/information>.
+				
+<ACI>
+			a foaf:Agent;
+				foaf:name "ACI";
+				dct:type <http://publications.europa.eu/resource/authority/corporate-body-classification/CB>.

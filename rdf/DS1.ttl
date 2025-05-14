@@ -1,0 +1,52 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcatap: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix prov: <https://www.w3.org/TR/prov-o/>.
+
+<DS1>
+            a   dcatap:Dataset
+                prov:Entity ;
+
+            adms:identifier  "dati-centraline-bologna-storico" ;            
+            dct:title   "Quality of air in station (historical from 2017)" ;
+            dct:description "Air quality data from 2017 to 2024, relating to the three monitoring stations located in the municipality of Bologna." ;
+
+            dcat:theme  <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
+            dct:subject <http://eurovoc.europa.eu/5206>  ;
+            dcat:keyword "environment policy"@en, "Bologna"@en ;
+            dcat:keyword  "politica dell'ambiente"@it, "Bologna"@it ;
+
+            dct:modified "2025-04-07"^^xsd:date ;
+
+            dct:rightsHolder <Comune_di_Bologna> ;
+            dct:creator <Comune_di_Bologna> ;                        
+            dct:publisher <Comune_di_Bologna>;
+            dcat:distribution <Comune_di_Bologna> ; 
+
+            dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL>;
+
+            dct:language    <http://publications.europa.eu/resource/authority/language/ITA/> ;
+
+            dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+
+            prov:wasDerivedFrom <https://dati.arpae.it/dataset/qualita-dell-aria-rete-di-monitoraggio>.
+          
+<http://publications.europa.eu/resource/authority/data-theme/ENVI>
+            a    skos:Concept ;
+            skos:prefLabel  "Environment"@en .
+
+<http://creativecommons.org/licenses/by/4.0/>
+            a    dct:LicenseDocument ;
+                dct:type         <http://purl.org/adms/licencetype/Attribution> ;
+                foaf:name        "CC BY" ;
+                owl:versionInfo  "4.0" .
+            
+<Comune_di_Bologna>
+			a foaf:Agent, dcat:Distribution;
+				foaf:name "Comune di Bologna";
+				dct:type <http://publications.europa.eu/resource/authority/organization-type/AUT_REG>;
+				dct:spatial <http://publications.europa.eu/resource/authority/place/ITA_BLQ>;
+				dcat:accessURL <https://opendata.comune.bologna.it/explore/dataset/dati-centraline-bologna-storico/information>.

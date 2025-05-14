@@ -1,0 +1,45 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcatap: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix prov: <https://www.w3.org/TR/prov-o/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<DS3>
+            a   dcatap:Dataset
+                prov:Entity ;
+           
+            dct:title   "TPER Spa. Vehicle fleet - Number of urban vehicles by fuel - historical series" ;
+            dct:description "TPER Spa. Vehicle fleet - Number of urban vehicles by fuel - historical series" ;
+
+            dcat:theme  <http://publications.europa.eu/resource/authority/data-theme/TRAN> ;
+            dct:subject <http://eurovoc.europa.eu/4816>  ;
+            dcat:keyword "terrestial transport"@en, "Bologna"@en ;
+            dcat:keyword  "trasporti terrestri"@it, "Bologna"@it ;
+
+            dct:rightsHolder <Comune_di_Bologna> ;
+            dct:creator <Comune_di_Bologna> ;                        
+            dct:publisher <Citta_Metropolitana_di_Bologna>;
+            dcat:distribution <I_numeri_di_Bologna_metropolitana> ; 
+
+            dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/UNKNOWN>;
+
+            dct:language    <http://publications.europa.eu/resource/authority/language/ITA/>.
+          
+<http://publications.europa.eu/resource/authority/data-theme/TRAN>
+            a    skos:Concept ;
+            skos:prefLabel  "Transport"@en .
+            
+<Comune_di_Bologna>
+			a foaf:Agent;
+				dct:type <http://publications.europa.eu/resource/authority/organization-type/AUT_REG>;
+				dct:spatial <http://publications.europa.eu/resource/authority/place/ITA_BLQ>;
+				
+<Citta_Metropolitana_di_Bologna>
+			a foaf:Agent;
+				dct:type <http://publications.europa.eu/resource/authority/organization-type/AUT_REG>;
+				dct:spatial <http://publications.europa.eu/resource/authority/place/ITA_BLQ>;
+				
+<I_numeri_di_Bologna_metropolitana>
+			a dcat:Distribution;
+				dcat:accessURL <https://inumeridibolognametropolitana.it/dati-statistici/tper-spa-parco-vetture-numero-mezzi-urbani-alimentazione-serie-storica>.
