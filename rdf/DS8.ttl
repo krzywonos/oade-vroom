@@ -7,46 +7,45 @@
 @prefix prov: <https://www.w3.org/TR/prov-o/>.
 
 
-<DS8>
-            a   dcatap:Dataset
-                prov:Entity ;
+<https://github.com/krzywonos/oade-vroom/original-datasets/DS8>
+            a dcatap:Dataset, prov:Entity;
 
-            adms:identifier  "DS1547" ;            
-            dct:title   "TPL demand - Annual passengers per inhabitant - historical series" ;
-            dct:description "The dataset shows, starting from 2013, the demand for local public transport, quantified in annual passengers per inhabitant, in the Municipality of Milan" ;
+            adms:identifier "DS1547";            
+            dct:title "TPL demand - Annual passengers per inhabitant - historical series";
+            dct:description "The dataset shows, starting from 2013, the demand for local public transport, quantified in annual passengers per inhabitant, in the Municipality of Milan";
 
-            dcat:theme  <http://publications.europa.eu/resource/authority/data-theme/TRAN> ;
-            dct:subject <http://eurovoc.europa.eu/4806>  ;
-            dcat:keyword "transport policy"@en, "Milan"@en ;
-            dcat:keyword  "politica dei trasporti"@it, "Milano"@it ;
+            dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TRAN>;
+            dct:subject <http://eurovoc.europa.eu/4806>;
+            dcat:keyword "transport policy"@en, "Milan"@en;
+            dcat:keyword "politica dei trasporti"@it, "Milano"@it;
 
-            dct:modified "2021-04-26"^^xsd:date ;
+            dct:modified "2021-04-26"^^xsd:date;
 
-            dct:rightsHolder <Comune_di_Milano> ;
-            dct:creator <Comune_di_Milano> ;                        
+            dct:rightsHolder <Comune_di_Milano>;
+            dct:creator <Comune_di_Milano>;                        
             dct:publisher <Comune_di_Milano>;
-            dcat:distribution <Comune_di_Milano> ; 
+            dcat:distribution <Comune_di_Milano>; 
 
             dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREGULAR>;
 
-            dct:language    <http://publications.europa.eu/resource/authority/language/ITA/> ;
+            dct:language <http://publications.europa.eu/resource/authority/language/ITA/>;
 
-            dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+            dct:license <http://creativecommons.org/licenses/by/4.0/>;
 
             prov:wasDerivedFrom <https://www.istat.it/it/archivio/244648>.
           
 <http://publications.europa.eu/resource/authority/data-theme/TRAN>
-            a    skos:Concept ;
-            skos:prefLabel  "Transport"@en .
+            a skos:Concept;
+            skos:prefLabel "Transport"@en .
 
 <http://creativecommons.org/licenses/by/4.0/>
-            a    dct:LicenseDocument ;
-                dct:type         <http://purl.org/adms/licencetype/Attribution> ;
-                foaf:name        "CC BY" ;
-                owl:versionInfo  "4.0" .
+            a dct:LicenseDocument;
+            dct:type <http://purl.org/adms/licencetype/Attribution>;
+            foaf:name "CC BY";
+            owl:versionInfo "4.0".
             
 <Comune_di_Milano>
 			a foaf:Agent, dcat:Distribution;
-				dct:type <http://publications.europa.eu/resource/authority/organization-type/AUT_REG>;
-				dct:spatial <http://publications.europa.eu/resource/authority/place/ITA_MIL>;
-				dcat:accessURL <https://dati.comune.milano.it/dataset/ds1547-domanda-di-tpl-passeggeri-annui-per-abitante-serie-storica>.
+			dct:type <http://publications.europa.eu/resource/authority/organization-type/AUT_REG>;
+			dct:spatial <http://publications.europa.eu/resource/authority/place/ITA_MIL>;
+			dcat:accessURL <https://dati.comune.milano.it/dataset/ds1547-domanda-di-tpl-passeggeri-annui-per-abitante-serie-storica>.

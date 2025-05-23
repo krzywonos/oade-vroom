@@ -7,46 +7,45 @@
 @prefix prov: <https://www.w3.org/TR/prov-o/>.
 
 
-<DS7>
-            a   dcatap:Dataset
-                prov:Entity ;
+<https://github.com/krzywonos/oade-vroom/original-datasets/DS7>
+            a dcatap:Dataset, prov:Entity;
 
-            adms:identifier  "DS1568" ;            
-            dct:title   "Buses used for local public transport by emission class - Percentage composition - Historical series" ;
-            dct:description "The dataset shows, starting from the year 2015, the buses used for local public transport in the municipality of Milan (percentage composition) by emission class (Euro 4 or lower, Euro 5, Euro 6)." ;
+            adms:identifier "DS1568";            
+            dct:title "Buses used for local public transport by emission class - Percentage composition - Historical series";
+            dct:description "The dataset shows, starting from the year 2015, the buses used for local public transport in the municipality of Milan (percentage composition) by emission class (Euro 4 or lower, Euro 5, Euro 6).";
 
-            dcat:theme  <http://publications.europa.eu/resource/authority/data-theme/TRAN> ;
-            dct:subject <http://eurovoc.europa.eu/4816>  ;
-            dcat:keyword "terrestrial transport"@en, "Milan"@en ;
-            dcat:keyword  "trasporti terrestri"@it, "Milano"@it ;
+            dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TRAN>;
+            dct:subject <http://eurovoc.europa.eu/4816>;
+            dcat:keyword "terrestrial transport"@en, "Milan"@en;
+            dcat:keyword "trasporti terrestri"@it, "Milano"@it;
 
-            dct:modified "2021-05-31"^^xsd:date ;
+            dct:modified "2021-05-31"^^xsd:date;
 
-            dct:rightsHolder <Comune_di_Milano> ;
-            dct:creator <Comune_di_Milano> ;                        
+            dct:rightsHolder <Comune_di_Milano>;
+            dct:creator <Comune_di_Milano>;                        
             dct:publisher <Comune_di_Milano>;
-            dcat:distribution <Comune_di_Milano> ; 
+            dcat:distribution <Comune_di_Milano>; 
 
             dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREGULAR>;
 
-            dct:language    <http://publications.europa.eu/resource/authority/language/ITA/> ;
+            dct:language <http://publications.europa.eu/resource/authority/language/ITA/>;
 
-            dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+            dct:license <http://creativecommons.org/licenses/by/4.0/>;
 
             prov:wasDerivedFrom <https://www.istat.it/it/archivio/244648>.
           
 <http://publications.europa.eu/resource/authority/data-theme/TRAN>
-            a    skos:Concept ;
-            skos:prefLabel  "Transport"@en .
+            a skos:Concept;
+            skos:prefLabel "Transport"@en.
 
 <http://creativecommons.org/licenses/by/4.0/>
-            a    dct:LicenseDocument ;
-                dct:type         <http://purl.org/adms/licencetype/Attribution> ;
-                foaf:name        "CC BY" ;
-                owl:versionInfo  "4.0" .
+            a dct:LicenseDocument;
+            dct:type <http://purl.org/adms/licencetype/Attribution>;
+            foaf:name "CC BY";
+            owl:versionInfo "4.0".
             
 <Comune_di_Milano>
 			a foaf:Agent, dcat:Distribution;
-				dct:type <http://publications.europa.eu/resource/authority/organization-type/AUT_REG>;
-				dct:spatial <http://publications.europa.eu/resource/authority/place/ITA_MIL>;
-				dcat:accessURL <https://dati.comune.milano.it/dataset/ds1568-autobus-per-classe-di-emissione-composizione-percentuale-serie-storica>.
+			dct:type <http://publications.europa.eu/resource/authority/organization-type/AUT_REG>;
+			dct:spatial <http://publications.europa.eu/resource/authority/place/ITA_MIL>;
+			dcat:accessURL <https://dati.comune.milano.it/dataset/ds1568-autobus-per-classe-di-emissione-composizione-percentuale-serie-storica>.

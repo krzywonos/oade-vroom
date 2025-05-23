@@ -1,0 +1,74 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcatap: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix prov: <https://www.w3.org/TR/prov-o/>.
+
+
+<https://github.com/krzywonos/oade-vroom/original-datasets/DS5-5>
+            a dcatap:Dataset, prov:Entity;
+
+            adms:identifier "DS413";            
+            dct:title "Air quality detection 2021";
+            dct:description "The dataset shows the data of the Daily Air Quality Report of the Municipality of Milan drawn up by AMAT, based on the data measured and validated daily by Arpa Lombardia from the institutional air quality stations present in the municipal territory.";
+
+            dct:isPartOf <https://github.com/krzywonos/oade-vroom/original-datasets/DS5>;
+
+            dcat:theme  <http://publications.europa.eu/resource/authority/data-theme/ENVI>;
+            dct:subject <http://eurovoc.europa.eu/5206>;
+            dcat:keyword "environment policy"@en, "Milan"@en ;
+            dcat:keyword  "politica dell'ambiente"@it, "Milano"@it;
+
+            dct:modified "2022-01-12"^^xsd:date;
+
+            dct:rightsHolder <Comune_di_Milano>;
+            dct:creator <Comune_di_Milano>;                        
+            dct:publisher <Comune_di_Milano>;
+            dcat:distribution <Comune_di_Milano>; 
+
+            dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/NEVER>;
+
+            dct:language <http://publications.europa.eu/resource/authority/language/ITA/>;
+
+            dct:license <http://creativecommons.org/licenses/by/4.0/>;
+
+            prov:wasDerivedFrom <https://www.amat-mi.it/it/agenzia/rapporto-qualita-aria>.
+          
+<http://publications.europa.eu/resource/authority/data-theme/ENVI>
+            a skos:Concept;
+            skos:prefLabel "Environment"@en.
+
+<http://creativecommons.org/licenses/by/4.0/>
+            a dct:LicenseDocument;
+            dct:type <http://purl.org/adms/licencetype/Attribution>;
+            foaf:name "CC BY";
+            owl:versionInfo "4.0".
+            
+<Comune_di_Milano>
+			a foaf:Agent, dcat:Distribution;
+			dct:type <http://publications.europa.eu/resource/authority/organization-type/AUT_REG>;
+			dct:spatial <http://publications.europa.eu/resource/authority/place/ITA_MIL>;
+			dcat:accessURL <https://dati.comune.milano.it/dataset/ds459-rilevazione-qualita-aria-2018>.
+
+<https://github.com/krzywonos/oade-vroom/original-datasets/DS5>
+            a dcat:datasetSeries;         
+            dct:title   "Air quality detection";
+            dct:description "The dataset shows the data of the Daily Air Quality Report of the Municipality of Milan drawn up by AMAT, based on the data measured and validated daily by Arpa Lombardia from the institutional air quality stations present in the municipal territory.";
+
+            dcat:theme  <http://publications.europa.eu/resource/authority/data-theme/ENVI>;
+            dct:subject <http://eurovoc.europa.eu/5206>;
+            dcat:keyword "environment policy"@en, "Milan"@en;
+            dcat:keyword "politica dell'ambiente"@it, "Milano"@it;
+
+            dct:rightsHolder <Comune_di_Milano>;
+            dct:creator <Comune_di_Milano>;                        
+            dct:publisher <Comune_di_Milano>;
+            dcat:distribution <Comune_di_Milano>;
+
+            dct:language <http://publications.europa.eu/resource/authority/language/ITA/>;
+
+            dct:license <http://creativecommons.org/licenses/by/4.0/>;
+
+            prov:wasDerivedFrom <https://www.amat-mi.it/it/agenzia/rapporto-qualita-aria>.
