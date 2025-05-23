@@ -1,0 +1,86 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcatap: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix prov: <https://www.w3.org/TR/prov-o/>.
+
+
+<https://github.com/krzywonos/oade-vroom/mashup-datasets/MD2>
+            a dcatap:Dataset, prov:Entity;
+
+            adms:identifier "MD2";            
+            dct:title "MD2 - air quality and vehicle data for Milan (2017-2024)";
+            dct:description "Masuhp dataset with air quality and various vehicle data (power types of private vehicles, public transport buses efficiency, etc.) for Comune di Milano, years 2017-2024";
+
+            dcat:theme  <http://publications.europa.eu/resource/authority/data-theme/ENVI>,
+                        <http://publications.europa.eu/resource/authority/data-theme/TRAN>;
+
+            dct:subject <http://eurovoc.europa.eu/5206>, <http://eurovoc.europa.eu/4806>, <http://eurovoc.europa.eu/4816>;
+            dcat:keyword "environment policy"@en, "transport policy"@en, "terrestial transport"@en, "Milano"@en;
+            dcat:keyword  "politica dell'ambiente"@it, "politica dei trasporti"@it, trasporti terrestri"@it, "Milano"@it;
+
+            dct:modified "2025-05-23"^^xsd:date;
+            dct:issued "2025-05-23"^^xsd:date;
+
+            dct:rightsHolder <https://github.com/krzywonos/oade-vroom>;
+            dct:creator <https://github.com/krzywonos/oade-vroom/team/HubertKrzywonos>;                        
+            dct:publisher <https://github.com/krzywonos/oade-vroom>;
+            dcat:distribution <https://github.com/krzywonos/oade-vroom/distribution/MD2-csv>; 
+
+            dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/NEVER>;
+
+            dct:language <http://publications.europa.eu/resource/authority/language/ITA/>;
+
+            dct:license <http://creativecommons.org/licenses/by/4.0/>;
+
+            prov:wasGeneratedBy <https://github.com/krzywonos/oade-vroom/activity/mashup>;
+            prov:wasDerivedFrom <https://github.com/krzywonos/oade-vroom/original-datasets/DS5-1>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS5-2>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS5-3>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS5-4>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS5-5>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS5-6>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS5-7>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS5-8>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS6>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS7>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS8>,
+                                <https://github.com/krzywonos/oade-vroom/original-datasets/DS9>.
+          
+<http://publications.europa.eu/resource/authority/data-theme/ENVI>
+            a skos:Concept;
+            skos:prefLabel  "Environment"@en .
+
+<http://publications.europa.eu/resource/authority/data-theme/TRAN>
+            a skos:Concept;
+            skos:prefLabel  "Transport"@en .
+
+<http://creativecommons.org/licenses/by/4.0/>
+            a dct:LicenseDocument;
+            dct:type <http://purl.org/adms/licencetype/Attribution>;
+            foaf:name "CC BY";
+            owl:versionInfo "4.0".
+            
+<https://github.com/krzywonos/oade-vroom/activity/mashup>
+            a prov:Activity;
+            rdfs:label "the process of merging, filtering and aggregating multiple source datasets"@en.
+
+<https://github.com/krzywonos/oade-vroom> 
+            a dcatapit:Agent, foaf:Agent;
+            dct:identifier "oade-vroom";
+            foaf:name "Vehicular Research on Output and Outcomes in Milan/Bologna".
+
+
+<https://github.com/krzywonos/oade-vroom/team/HubertKrzywonos>
+            a foaf:Person;
+            foaf:name "Hubert Krzywonos"@en.            
+
+
+<https://github.com/krzywonos/oade-vroom/distribution/MD2-csv>
+            a dcat:Distribution;
+            dct:title  "CSV distribution of VROOM MD2"@en;
+            dct:format <http://publications.europa.eu/resource/authority/file-type/CSV/>;
+            dcat:accessURL <https://krzywonos.github.io/oade-vroom>;
+            dct:license   <http://creativecommons.org/licenses/by/4.0/>.    
