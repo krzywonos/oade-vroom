@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Air Pollutants Over Time</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <h2>Air Pollutants Over Time</h2>
+    <div id="plot" style="width:100%;height:90vh;"></div>
+
+    <script>
+        const pollutantColumns = [
+            "C6H6 (BENZENE)",
+            "CO (MONOSSIDO DI CARBONIO)",
+            "NO (MONOSSIDO DI AZOTO)",
+            "NO2 (BIOSSIDO DI AZOTO)",
+            "NOX (OSSIDI DI AZOTO)",
+            "PM10",
+            "PM2.5"
+        ];
+
+        function parseCSV(text) {
+            const rows = text.trim().split("\n").map(row => row.split(","));
+            const headers = rows[0];
+            const dataRows = rows.slice(1).filter(r => r.length === headers.length);
+            return { headers, dataRows };
+        }
+
+        function plotData(headers, dataRows) {
+            const dateIndex = headers.indexOf("DATE");
+            const dates = dataRows.map(r => new Date(r[dateIndex]));
+
+            // Sort by date just in case
+            const sortedData = dataRows.map((row, idx) => ({ date: dates[idx], row }))
+                .sort((a, b) => a.date - b.date);
+
+            const sortedDates = sortedData.map(d => d.date);
+            const sortedRows = sortedData.map(d => d.row);
+
+            const traces = [];
+
+            pollutantColumns.forEach(pollutant => {
+                const i = headers.indexOf(pollutant);
+                if (i === -1) return;
+                const y = sortedRows.map(r => parseFloat(r[i]) || null);
+                traces.push({
+                    x: sortedDates,
+                    y: y,
+                    mode: 'lines+markers',
+                    name: pollutant,
+                    type: 'scatter',
+                    hovertemplate: `${pollutant}: %{y}<br>Date: %{x|%Y-%m-%d}<extra></extra>`
+                });
+            });
+
+            Plotly.newPlot('plot', traces, {
+                title: 'Air Pollutants Over Time',
+                xaxis: { title: 'Date', type: 'date' },
+                yaxis: { title: 'Pollutant Concentration' },
+                legend: { orientation: "h", x: 0, y: -0.2 }
+            });
+        }
+
+        // Fetch CSV file from external URL and plot it
+        window.onload = () => {
+            const csvUrl = '/MD1.csv'; // <-- Replace with your CSV URL
+
+            fetch(csvUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    const { headers, dataRows } = parseCSV(text);
+                    plotData(headers, dataRows);
+                })
+                .catch(error => {
+                    document.getElementById('plot').innerText = `Error loading CSV file: ${error.message}`;
+                });
+        };
+    </script>
+</body>
+
+</html>
