@@ -726,6 +726,439 @@
 									</div>
 
 									<h3 class="major">Technical analysis</h3>
+									<h4>Source datasets</h4>
+									<p>Following is the evaluation of the source datasets based on the AGID metadata model, classifying metadata quality on a range from 1 to 4, based on the detail level, and the bond between data and metadata.</p>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>ID</th>
+													<th>Provenance</th>
+													<th>Format</th>
+													<th>Metadata</th>
+													<th>URI</th>
+													<th>License</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>DS1</th>
+													<th>Open Data di Comune di Bologna</th>
+													<th>CSV, JSON, Excel, GeoParquet</th>
+													<th>2 - data is accompanied by external metadata, included on the information subpage of the dataset</th>
+													<th>https://opendata.comune.bologna.it/explore/dataset/dati-centraline-bologna-storico/information</th>
+													<th>CC BY 4.0</th>
+												</tr>
+												<tr>
+													<th>DS2</th>
+													<th>Open Data di Comune di Bologna</th>
+													<th>CSV, JSON, Excel, GeoParquet</th>
+													<th>2 - data is accompanied by external metadata, included on the information subpage of the dataset</th>
+													<th>https://opendata.comune.bologna.it/explore/dataset/parco-circolante-veicoli/information</th>
+													<th>CC BY 4.0</th>
+												</tr>
+												<tr>
+													<th>DS3</th>
+													<th>I numeri di Bologna metropolitana</th>
+													<th>CSV, PDF, PNG</th>
+													<th>1 - no metadata provided</th>
+													<th>https://inumeridibolognametropolitana.it/dati-statistici/tper-spa-parco-vetture-numero-mezzi-urbani-alimentazione-serie-storica</th>
+													<th>freely reusable statistical data with attribution, per the Comune di Bologna's terms</th>
+												</tr>
+												<tr>
+													<th>DS4</th>
+													<th>I numeri di Bologna metropolitana</th>
+													<th>CSV, PDF, PNG</th>
+													<th>1 - no metadata provided</th>
+													<th>https://inumeridibolognametropolitana.it/dati-statistici/tper-spa-numero-di-viaggiatori-trasportati-bacino-di-bologna-serie-storica</th>
+													<th>freely reusable statistical data with attribution, per the Comune di Bologna's terms</th>
+												</tr>
+												<tr>
+													<th>DS5</th>
+													<th>Open Data - Comune di Milano</th>
+													<th>CSV, JSON</th>
+													<th>2 - data is accompanied by external metadata, included on the information subpage of the dataset</th>
+													<th>https://dati.comune.milano.it/dataset/ds407-rilevazione-qualita-aria-2024</th>
+													<th>CC BY 4.0</th>
+												</tr>
+												<tr>
+													<th>DS6</th>
+													<th>Open Data - Comune di Milano</th>
+													<th>CSV, JSON</th>
+													<th>2 - data is accompanied by external metadata, included on the information subpage of the dataset</th>
+													<th>https://dati.comune.milano.it/dataset/ds1570-autobus-basse-emissioni-serie-storica</th>
+													<th>CC BY 4.0</th>
+												</tr>
+												<tr>
+													<th>DS7</th>
+													<th>Open Data - Comune di Milano</th>
+													<th>CSV, JSON</th>
+													<th>2 - data is accompanied by external metadata, included on the information subpage of the dataset</th>
+													<th>https://dati.comune.milano.it/dataset/ds1568-autobus-per-classe-di-emissione-composizione-percentuale-serie-storica</th>
+													<th>CC BY 4.0</th>
+												</tr>
+												<tr>
+													<th>DS8</th>
+													<th>Open Data - Comune di Milano</th>
+													<th>CSV, JSON</th>
+													<th>2 - data is accompanied by external metadata, included on the information subpage of the dataset</th>
+													<th>https://dati.comune.milano.it/dataset/ds1547-domanda-di-tpl-passeggeri-annui-per-abitante-serie-storica</th>
+													<th>CC BY 4.0</th>
+												</tr>
+												<tr>
+													<th>DS9</th>
+													<th>Open Data - Comune di Milano</th>
+													<th>CSV, JSON</th>
+													<th>2 - data is accompanied by external metadata, included on the information subpage of the dataset</th>
+													<th>https://dati.comune.milano.it/dataset/ds721-parco-veicoli-circolanti</th>
+													<th>CC BY 4.0</th>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<h4>RDF assertion and metadata for the mashup datasets</h4>
+									<p>All producedd mashup datasets have been described with metadata following the specification of DCAT-AP. While a point may be made, that since all our data are Italian in origin, we could use DCAT-AP_IT instead, we decided on using more flexible (and an European standard) DCAT-AP instead. Additionally, PROV-O, the provenance ontology, is used to described sources and activities.</p>
+									<h4>Additional metadata for source datasets</h4>
+									<p>The metadata for the source datasets has been gathered directly from the original sources. Where information was missing, it was inferred and supplemented following the same guidelines used for mashup datasets (e.g., assigning a theme to a source dataset was done according to the same European authority).</p>
+									<h4>Catalogue</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<tbody>
+												<tr>
+													<th>Title</th>
+													<th>Vehicular Research on Output and Outcomes in Milan/Bologna - Catalogue</th>
+												</tr>
+												<tr>
+													<th>Identifier</th>
+													<th>vroomCatalogue</th>
+												</tr>
+												<tr>
+													<th>Description</th>
+													<th>Catalogue containing the mashup datasets for the project Vehicular Research on Output and Outcomes in Milan/Bologna</th>
+												</tr>
+												<tr>
+													<th>Publisher</th>
+													<th>VROOM</th>
+												</tr>
+												<tr>
+													<th>Issued</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>Modified</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>Datasets</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>Homepage</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>Language</th>
+													<th>English</th>
+												</tr>
+												<tr>
+													<th>Theme taxonomy</th>
+													<th>Environment (https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/ENVI), Transport (https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/TRAN)</th>
+												</tr>
+												<tr>
+													<th>License</th>
+													<th>CC BY 4.0</th>
+												</tr>
+												<tr>
+													<th>RDF assertion of metadata</th>
+													<th></th>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<h4>Original datasets' metadata</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Dataset</th>
+													<th>Title</th>
+													<th>Identifier</th>
+													<th>Description</th>
+													<th>Theme</th>
+													<th>Subject</th>
+													<th>Issued</th>
+													<th>Modified</th>
+													<th>Accrual periodicity</th>
+													<th>Rights holder</th>
+													<th>Creator</th>
+													<th>Publisher</th>
+													<th>Distribution</th>
+													<th>Language</th>
+													<th>Derived from</th>
+													<th>License</th>
+													<th>RDF assertion of the metadata</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>DS1</th>
+													<th>Quality of air in station (historical from 2017)</th>
+													<th>dati-centraline-bologna-storico</th>
+													<th>Air quality data from 2017 to 2024, relating to the three monitoring stations located in the municipality of Bologna.</th>
+													<th>Environment</th>
+													<th>5206 politica dell'ambiente</th>
+													<th>X</th>
+													<th>April 7, 2025 10:26 AM</th>
+													<th>Annual</th>
+													<th>Comune di Bologna</th>
+													<th>Comune di Bologna</th>
+													<th>Comune di Bologna</th>
+													<th>API endpoint [https://opendata.comune.bologna.it/explore/dataset/dati-centraline-bologna-storico/api/?disjunctive.agente&sort=data_inizio&refine.data_fine=2020&refine.data_inizio=2020]</th>
+													<th>Italian</th>
+													<th>https://dati.arpae.it/dataset/qualita-dell-aria-rete-di-monitoraggio</th>
+													<th>CC-BY-SA 4.0</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>DS2</th>
+													<th>Vehicle fleet in circulation</th>
+													<th>parco-circolante-veicoli</th>
+													<th>Vehicle fleet of the Municipality of Bologna divided by postal code of residence of the owners</th>
+													<th>Transport</th>
+													<th>4806 politica dei trasporti</th>
+													<th>December 22, 2020</th>
+													<th>December 31, 2024 10:45 PM</th>
+													<th>Annual</th>
+													<th>Comune di Bologna</th>
+													<th>ACI</th>
+													<th>Comune di Bologna</th>
+													<th>API endpoint:[https://opendata.comune.bologna.it/explore/dataset/parco-circolante-veicoli/api/?sort=anno]</th>
+													<th>Italian</th>
+													<th>CC-BY-SA 4.0</th>
+													<th>http://www.aci.it/laci/studi-e-ricerche/dati-e-statistiche/open-data.html</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>DS3</th>
+													<th>TPER Spa. Vehicle fleet - Number of urban vehicles by fuel - historical series</th>
+													<th>X</th>
+													<th>TPER Spa. Vehicle fleet - Number of urban vehicles by fuel - historical series</th>
+													<th>Transport</th>
+													<th>4816 trasporti terrestri</th>
+													<th>?</th>
+													<th>?</th>
+													<th>?</th>
+													<th>Comune di Bologna</th>
+													<th>Comune di Bologna</th>
+													<th>Citta` Metropolitana di Bologna</th>
+													<th>Tableau: [https://public.tableau.com/app/profile/ufficio.statistiche.territoriali.bologna/viz/TPERMezziXAlimentazione_16805203267730/Tabella]</th>
+													<th>Italian</th>
+													<th>freely reusable statistical data with attribution, per the Comune di Bologna's terms</th>
+													<th>?</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>DS4</th>
+													<th>TPER Spa. Number of passengers transported - Bologna area - historical series</th>
+													<th>X</th>
+													<th>TPER Spa. Number of passengers transported - Bologna area - historical series</th>
+													<th>Transport</th>
+													<th>4806 politica dei trasporti</th>
+													<th>?</th>
+													<th>?</th>
+													<th>?</th>
+													<th>Comune di Bologna</th>
+													<th>Comune di Bologna</th>
+													<th>Citta Metropolitana di Bologna</th>
+													<th>Tableau: [https://public.tableau.com/app/profile/ufficio.statistiche.territoriali.bologna/viz/TPERViaggiatori_ST/Tabella]</th>
+													<th>Italian</th>
+													<th>freely reusable statistical data with attribution, per the Comune di Bologna's terms</th>
+													<th>?</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>DS5</th>
+													<th>Air quality detection</th>
+													<th>DS407</th>
+													<th>The dataset shows the data of the Daily Air Quality Report of the Municipality of Milan drawn up by AMAT, based on the data measured and validated daily by Arpa Lombardia from the institutional air quality stations present in the municipal territory.</th>
+													<th>Environment</th>
+													<th>5206 politica dell'ambiente</th>
+													<th>X</th>
+													<th>24-12-2024</th>
+													<th>Daily</th>
+													<th>Comune di Milano</th>
+													<th>Comune di Milano</th>
+													<th>Comune di Milano</th>
+													<th>API endpoint:[https://dati.comune.milano.it/api/3/action/datastore_search?resource_id=1fb5966e-4d73-4d41-8e1a-4f9a36d6dab]</th>
+													<th>Italian</th>
+													<th>CC-BY-SA 4.0</th>
+													<th>https://www.amat-mi.it/it/agenzia/rapporto-qualita-aria</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>DS6</th>
+													<th>Low emission buses used for local public transport - indicator per 100 buses and absolute value - Historical series</th>
+													<th>DS1570</th>
+													<th>The dataset shows, starting from 2014, the low-emission buses used for local public transport in the Municipality of Milan (indicator per 100 buses used and absolute value).</th>
+													<th>Transport</th>
+													<th>4816 trasporti terrestri</th>
+													<th>X</th>
+													<th>31-05-2021</th>
+													<th>Irregular</th>
+													<th>Comune di Milano</th>
+													<th>Unità Servizi Statistici</th>
+													<th>Comune di Milano</th>
+													<th>API endpoint:[https://dati.comune.milano.it/api/3/action/datastore_search?resource_id=8b6be5f8-e6f0-409f-aa9d-2ea1d2c1bbb9]</th>
+													<th>Italian</th>
+													<th>CC-BY-SA 4.0</th>
+													<th>https://www.istat.it/it/archivio/244648</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>DS7</th>
+													<th>Buses used for local public transport by emission class - Percentage composition - Historical series</th>
+													<th>DS1568</th>
+													<th>The dataset shows, starting from the year 2015, the buses used for local public transport in the municipality of Milan (percentage composition) by emission class (Euro 4 or lower, Euro 5, Euro 6).</th>
+													<th>Transport</th>
+													<th>4816 trasporti terrestri</th>
+													<th>X</th>
+													<th>31-05-2021</th>
+													<th>Irregular</th>
+													<th>Comune di Milano</th>
+													<th>Comune di Milano</th>
+													<th>Comune di Milano</th>
+													<th>API endpoint:[https://dati.comune.milano.it/api/3/action/datastore_search?resource_id=75ee8ba3-4b54-4f70-825f-4aa3fd3d4966]</th>
+													<th>Italian</th>
+													<th>CC-BY-SA 4.0</th>
+													<th>https://www.istat.it/it/archivio/244648</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>DS8</th>
+													<th>TPL demand - Annual passengers per inhabitant - historical series</th>
+													<th>DS1547</th>
+													<th>The dataset shows, starting from 2013, the demand for local public transport, quantified in annual passengers per inhabitant, in the Municipality of Milan</th>
+													<th>Transport</th>
+													<th>4806 politica dei trasporti</th>
+													<th>X</th>
+													<th>26-04-2021</th>
+													<th>Irregular</th>
+													<th>Comune di Milano</th>
+													<th>Unità Servizi Statistici</th>
+													<th>Comune di Milano</th>
+													<th>API endpoint:[https://dati.comune.milano.it/api/3/action/datastore_search?resource_id=d53fc1d6-fbc7-4528-bb0f-216561fc9dd0]</th>
+													<th>Italian</th>
+													<th>CC-BY-SA 4.0</th>
+													<th>https://www.istat.it/it/archivio/244648</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>DS9</th>
+													<th>Vehicle fleet 2004-2022</th>
+													<th>DS721</th>
+													<th>The dataset includes the number of vehicles in circulation since 2004</th>
+													<th>Transport</th>
+													<th>4806 politica dei trasporti</th>
+													<th>X</th>
+													<th>12-07-2023</th>
+													<th>Never</th>
+													<th>Comune di Milano</th>
+													<th>Unità Open Data</th>
+													<th>Comune di Milano</th>
+													<th>API endpoint:[https://dati.comune.milano.it/api/3/action/datastore_search?resource_id=7d95467d-6981-4c25-b15b-c7b83c4459b5]</th>
+													<th>Italian</th>
+													<th>CC-BY-SA 4.0</th>
+													<th>http://www.asr-lombardia.it/asrlomb/it/14022comuniparco-veicolare-circolante-categoria-comunale</th>
+													<th></th>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<h4>Mashup datasets' metadata</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Dataset</th>
+													<th>Title</th>
+													<th>Identifier</th>
+													<th>Description</th>
+													<th>Theme</th>
+													<th>Subject</th>
+													<th>Issued</th>
+													<th>Modified</th>
+													<th>Accrual periodicity</th>
+													<th>Rights holder</th>
+													<th>Creator</th>
+													<th>Publisher</th>
+													<th>Distribution</th>
+													<th>Language</th>
+													<th>Derived from</th>
+													<th>License</th>
+													<th>RDF assertion of the metadata</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>MD1</th>
+													<th>MD1 - air quality and vehicle data for Bologna (2017-2024)</th>
+													<th>MD1</th>
+													<th>Masuhp dataset with air quality and various vehicle data (power types of private vehicles, public transport buses efficiency, etc.) for Comune di Bologna, years 2017-2024</th>
+													<th>Transport, Environment</th>
+													<th>5206 environment policy, 4806 transport policy, 4816 terrestrial transport</th>
+													<th>23-05-2025</th>
+													<th>23-05-2025</th>
+													<th>Annual</th>
+													<th>VROOM</th>
+													<th>VROOM - Ahmadreza Nazari</th>
+													<th>VROOM</th>
+													<th>CSV</th>
+													<th>English</th>
+													<th>DS1, DS2, DS3, DS4</th>
+													<th>CC-BY-SA 4.0</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>MD2</th>
+													<th>MD2 - air quality and vehicle data for Milan (2017-2024)</th>
+													<th>MD2</th>
+													<th>Masuhp dataset with air quality and various vehicle data (power types of private vehicles, public transport buses efficiency, etc.) for Comune di Milano, years 2017-2024</th>
+													<th>Transport, Environment</th>
+													<th>5206 environment policy, 4806 transport policy, 4816 terrestrial transport</th>
+													<th>23-05-2025</th>
+													<th>23-05-2025</th>
+													<th>Annual</th>
+													<th>VROOM</th>
+													<th>VROOM - Hubert Krzywonos</th>
+													<th>VROOM</th>
+													<th>CSV</th>
+													<th>English</th>
+													<th>DS5, DS6, DS7, DS8, DS9</th>
+													<th>CC-BY-SA 4.0</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>MDS1_2</th>
+													<th>MDS1_2 - air quality and vehicle registration data per CAP for Bologna (2019-2024)</th>
+													<th>MDS1_2</th>
+													<th>Masuhp dataset with air quality and registration of vehicles per CAP for Comune di Bologna, years 2019-2024</th>
+													<th>Transport, Environment</th>
+													<th>5206 environment policy, 4806 transport policy, 4816 terrestrial transport</th>
+													<th>29-05-2025</th>
+													<th>29-05-2025</th>
+													<th>Annual</th>
+													<th>VROOM</th>
+													<th>VROOM - Ahmadreza Nazari</th>
+													<th>VROOM</th>
+													<th>CSV</th>
+													<th>English</th>
+													<th>DS1, DS2</th>
+													<th>CC-BY-SA 4.0</th>
+													<th></th>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 									<h4>FAIR principles</h4>
 									<p>As a part of the technical analysis, we have performed an analysis of the FAIR principles of all the source datasets. These are a set of recommendations proposed by the GO FAIR Initiative, a consortium of scientists and organisations aimed to support Findability, Accessibility, Interoperability and Reusability of digital data.</p>
 									<h5>Findability</h5>

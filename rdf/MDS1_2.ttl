@@ -10,8 +10,8 @@
 <https://github.com/krzywonos/oade-vroom/mashup-datasets/MDS1_2>
             a dcatap:Dataset, prov:Entity;
 
-            adms:identifier "MD1";            
-            dct:title "MD1 - air quality and vehicle registration data per CAP for Bologna (2019-2024)";
+            adms:identifier "MDS1_2";            
+            dct:title "MDS1_2 - air quality and vehicle registration data per CAP for Bologna (2019-2024)";
             dct:description "Masuhp dataset with air quality and registration of vehicles per CAP for Comune di Bologna, years 2019-2024";
 
             dcat:theme  <http://publications.europa.eu/resource/authority/data-theme/ENVI>,
@@ -21,8 +21,8 @@
             dcat:keyword "environment policy"@en, "transport policy"@en, "terrestial transport"@en, "Bologna"@en;
             dcat:keyword  "politica dell'ambiente"@it, "politica dei trasporti"@it, trasporti terrestri"@it, "Bologna"@it;
 
-            dct:modified "2025-05-23"^^xsd:date;
-            dct:issued "2025-05-23"^^xsd:date;
+            dct:modified "2025-05-29"^^xsd:date;
+            dct:issued "2025-05-29"^^xsd:date;
 
             dct:rightsHolder <https://github.com/krzywonos/oade-vroom>;
             dct:creator <https://github.com/krzywonos/oade-vroom/team/AhmadrezaNazari>;                        
