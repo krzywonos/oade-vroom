@@ -27,8 +27,8 @@ let geoJsonLayer; // To hold the GeoJSON layer for easy removal/update
 let maskLayer; // To hold the mask layer
 
 // Load CSV pollutant data
-async function loadPollutantCSV(csvUrl) {
-    const response = await fetch(csvUrl);
+async function loadPollutantCSV(csvurl) {
+    const response = await fetch(csvurl);
     const csvText = await response.text();
 
     return new Promise((resolve, reject) => {
@@ -167,10 +167,10 @@ function updateMap(year) {
 // Main function to load everything
 async function loadMapData() {
     try {
-        const { dataByCap, years } = await loadPollutantCSV('MDS1_2.csv');
+        const { dataByCap, years } = await loadPollutantCSV('/mashup-datasets/MDS1_2.csv');
         pollutantDataGlobal = dataByCap;
 
-        const response = await fetch('bologna_cap.geojson');
+        const response = await fetch('assets/js/bologna_cap.geojson');
         geojsonDataGlobal = await response.json();
 
         // Initialize the slider
