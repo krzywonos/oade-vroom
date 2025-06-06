@@ -1,4 +1,3 @@
-import data from './bologna_cap.geojson' assert {type: 'json'};
 // Initialize map
 const map = L.map('map').setView([44.4949, 11.3426], 12);
 
@@ -28,8 +27,8 @@ let geoJsonLayer; // To hold the GeoJSON layer for easy removal/update
 let maskLayer; // To hold the mask layer
 
 // Load CSV pollutant data
-async function loadPollutantCSV(csvurl) {
-    const response = await fetch(csvurl);
+async function loadPollutantCSV(csvUrl) {
+    const response = await fetch(csvUrl);
     const csvText = await response.text();
 
     return new Promise((resolve, reject) => {
@@ -168,12 +167,10 @@ function updateMap(year) {
 // Main function to load everything
 async function loadMapData() {
     try {
-        const { dataByCap, years } = await loadPollutantCSV(
-            'https://raw.githubusercontent.com/krzywonos/oade-vroom/refs/heads/main/mashup-datasets/MDS1_2.csv?token=GHSAT0AAAAAADD37QHBTMA6Q5VJUANHBATU2CCS4PA'
-        );
+        const { dataByCap, years } = await loadPollutantCSV('MDS1_2.csv');
         pollutantDataGlobal = dataByCap;
 
-        const response = await fetch('https://raw.githubusercontent.com/krzywonos/oade-vroom/refs/heads/main/Assets/assets/js/bologna_cap.geojson?token=GHSAT0AAAAAADD37QHAR2LIHQMOWEMLJZ2K2CCS6IQ');
+        const response = await fetch('bologna_cap.geojson');
         geojsonDataGlobal = await response.json();
 
         // Initialize the slider
