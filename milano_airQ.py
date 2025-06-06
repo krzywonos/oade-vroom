@@ -14,6 +14,7 @@ df["Month"] = df["DATE"].dt.to_period("M").dt.to_timestamp()
 gases = ["C6H6 (BENZENE)", "CO (MONOSSIDO DI CARBONIO)", "NO2 (DIOSSIDO DI AZOTO)",
          "O3 (OZONO)", "PM10", "PM25", "SO2 (DIOSSIDO DI SULFURIO)"]
 
+
 # Prepare figure
 fig = go.Figure()
 
@@ -25,25 +26,34 @@ for year in years:
     visible = []
     for gas in gases:
         monthly = df[df["Year"] == year].groupby("Month")[gas].mean()
-        fig.add_trace(go.Scatter(x=monthly.index, y=monthly.values,
-                                 name=gas, visible=(year == 2017)))
+        fig.add_trace(go.Scatter(x=monthly.index, 
+                                 y=monthly.values,
+                                 name=gas, 
+                                 visible=(year == 2017)))
         visible.extend([True if year == 2017 else False])
 
-    buttons.append(dict(label=str(year),
-                        method="update",
-                        args=[{"visible": [v if y == year else False
-                                           for y in years for v in [True]*len(gases)]},
-                              {"title": f"Gases in {year}"}]))
+    buttons.append(dict(
+        label=str(year),
+        method="update",
+        args=[
+            {"visible": [i // len(gases) == (year - 2017) for i in range(len(gases) * len(years))]},
+            {"title": {"text": f"Air Pollutants in {year}"}}
+        ]
+    ))
 
 # Layout
 fig.update_layout(
-    title="Air Pollutants by Month",
-    xaxis_title="Month",
-    yaxis_title="Gas Concentration (μg/m³)",
-    updatemenus=[{"buttons": buttons, "direction": "down", "showactive": True}],
-    legend_title="Type of Gas"
+    title="Air Pollutants in 2017",
+    yaxis_title="Concentration (μg/m³)",
+    updatemenus=[dict(
+        active=0,
+        buttons=buttons,
+        direction="down",
+        showactive=True,
+    )],
+    legend_title="Type of Gas",
 )
 
-fig.show()
-fig.write_html("milano_air_plot.html", include_plotlyjs="cdn")
+
+fig.write_html("milano_airQ.html", include_plotlyjs="cdn")
 

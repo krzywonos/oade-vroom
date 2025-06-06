@@ -1,3 +1,4 @@
+import data from './bologna_cap.geojson' assert {type: 'json'};
 // Initialize map
 const map = L.map('map').setView([44.4949, 11.3426], 12);
 
@@ -167,10 +168,12 @@ function updateMap(year) {
 // Main function to load everything
 async function loadMapData() {
     try {
-        const { dataByCap, years } = await loadPollutantCSV('/mashup-datasets/MDS1_2.csv');
+        const { dataByCap, years } = await loadPollutantCSV(
+            'https://raw.githubusercontent.com/krzywonos/oade-vroom/refs/heads/main/mashup-datasets/MDS1_2.csv?token=GHSAT0AAAAAADD37QHBTMA6Q5VJUANHBATU2CCS4PA'
+        );
         pollutantDataGlobal = dataByCap;
 
-        const response = await fetch('assets/js/bologna_cap.geojson');
+        const response = await fetch('https://raw.githubusercontent.com/krzywonos/oade-vroom/refs/heads/main/Assets/assets/js/bologna_cap.geojson?token=GHSAT0AAAAAADD37QHAR2LIHQMOWEMLJZ2K2CCS6IQ');
         geojsonDataGlobal = await response.json();
 
         // Initialize the slider
