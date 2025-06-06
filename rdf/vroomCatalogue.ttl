@@ -1,0 +1,40 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcatap: <http://data.europa.eu/r5r/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+ 
+ 
+<https://github.com/krzywonos/oade-vroom/rdf/vroomCatalogue> 
+                    a dcat:Catalog;
+                    dct:title "Vehicular Research on Output and Outcomes in Milan/Bologna - Catalogue"@en;
+                    adms:identifier "vroomCatalogue"@en; 
+                    dct:description "Catalogue containing the mashup datasets for the VROOM project";
+                    dct:publisher <https://github.com/krzywonos/oade-vroom>;
+                    dct:issued "2025-06-06"^^xsd:date;  
+                    dct:modified "2025-06-06"^^xsd:date;
+                    
+                    dcat:dataset <https://github.com/krzywonos/oade-vroom/mashup-datasets/MD1>;
+                    dcat:dataset <https://github.com/krzywonos/oade-vroom/mashup-datasets/MD2>;
+                    dcat:dataset <https://github.com/krzywonos/oade-vroom/mashup-datasets/MDS1_2>;
+
+                    foaf:homepage <https://github.com/krzywonos/oade-vroom/tree/54d8cd853c7cb502ef7a916470b7bc40544c96d5/mashup-datasets>;
+                    dct:language <http://publications.europa.eu/resource/authority/language/ENG/>;
+                    dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme/>;
+                    
+                    dct:license	    <https://creativecommons.org/licenses/by-sa/4.0/>.
+
+
+<https://github.com/krzywonos/oade-vroom> 
+                    a foaf:Agent;
+                    dct:identifier "oade-vroom";
+                    foaf:name "Vehicular Research on Output and Outcomes in Milan/Bologna".
+
+
+<https://creativecommons.org/licenses/by-sa/4.0/>
+                    a dct:LicenseDocument;
+                    dct:type <http://purl.org/adms/licencetype/Attribution>;
+                    foaf:name "CC-BY-SA";
+                    owl:versionInfo "4.0".
+
+        
