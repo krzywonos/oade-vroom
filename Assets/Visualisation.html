@@ -5,21 +5,57 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Generic - Solid State by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<head>
+	<title>Generic - Solid State by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-	</head>
-	<body class="is-preload">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<style>
+		#map {
+			height: 40vw;
+			width: 40vw;
+			/* Adjust width as needed */
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+			/* Max width for larger screens */
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
+		}
+
+		.controls-container {
+			background-color: white;
+			padding: 15px 25px;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			width: 80%;
+			width: 80vh;
+			text-align: center;
+		}
+
+		#yearSlider {
+			margin: 15px auto;
+			width: 40vh
+				/* Slider width relative to its container */
+		}
+
+		#currentYearDisplay {
+			margin-left: 10px;
+			color: #333;
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
 
 		<!-- Header -->
 		<header id="header">
@@ -29,55 +65,60 @@
 			</nav>
 		</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="datasets.html">Datasets</a></li>
-								<li><a href="analysis.html">Analysis</a></li>
-								<li><a href="visualisation.html">Visualisation</a></li>
-								<li><a href="documentation.html">Documentation</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="datasets.html">Datasets</a></li>
+					<li><a href="analysis.html">Analysis</a></li>
+					<li><a href="visualisation.html">Visualisation</a></li>
+					<li><a href="documentation.html">Documentation</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>Visualisation</h2>
-								<p>In this section the data are going to be displayed separatley for each city, due to the different nature of the datasets.</p>
-							</div>
-						</header>
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>Visualisation</h2>
+					<p>In this section the data are going to be displayed separatley for each city, due to the different
+						nature of the datasets.</p>
+				</div>
+			</header>
 
 			<!-- Content -->
 			<div class="wrapper">
 				<div class="inner">
 
-									<h3 class="major">Milano vehicle types</h3>
-									<p>The chart shows the total amount of vehicle types for each cathegories for the years 2017-2024.<br>
-										For readability purposes the column of the dataset have been summarized as follow:
-										<div class="row">
-											<div class="">
-												<ul>
-													<li>MERCI: autocarri trasporto merci, motocarri e quadricicli trasporto merci, rimorchi e semirimorchi trasporto merci</li>
-													<li>SPECIALI: autoveicoli speciali specifici, motoveicoli e quadricicli speciali specifici, rimorchi e semirimorchi speciali </li>
-												</ul>
-											</div>
-										</div>
-									</p>
-									<iframe src="../milano_vehicle.html" width="100%" height="600" frameborder="0"></iframe> 
-									<br>
-									<br>
-									
-									<h3 class="major">Milano air quality</h3>
-									<p>The chart shows the quantity of gases measured each month from six different station in Milan. The values displayed have been averaged for readability purposes.</p>
-									<iframe src="../milano_airQ.html" width="100%" height="600" frameborder="0"></iframe>
->>>>>>> Stashed changes
+					<h3 class="major">Milano vehicle types</h3>
+					<p>The chart shows the total amount of vehicle types for each cathegories for the years
+						2017-2024.<br>
+						For readability purposes the column of the dataset have been summarized as follow:
+					<div class="row">
+						<div class="">
+							<ul>
+								<li>MERCI: autocarri trasporto merci, motocarri e quadricicli trasporto merci, rimorchi
+									e semirimorchi trasporto merci</li>
+								<li>SPECIALI: autoveicoli speciali specifici, motoveicoli e quadricicli speciali
+									specifici, rimorchi e semirimorchi speciali </li>
+							</ul>
+						</div>
+					</div>
+					</p>
+					<iframe src="../milano_vehicle.html" width="100%" height="600" frameborder="0"></iframe>
+					<br>
+					<br>
 
+					<h3 class="major">Milano air quality</h3>
+					<p>The chart shows the quantity of gases measured each month from six different station in Milan.
+						The values displayed have been averaged for readability purposes.</p>
+					<iframe src="../milano_airQ.html" width="100%" height="600" frameborder="0"></iframe>
+
+					<h3 class="major">Bologna vehicle types</h3>
 					<div id="map"></div>
 					<div class="controls-container">
 						<label for="yearSlider">Select Year:</label>
@@ -113,7 +154,7 @@
 							<a href="#" class="special">Learn more</a>
 						</article>
 					</section>
-									
+
 
 				</div>
 			</div>
@@ -169,7 +210,7 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="assets/js/map.js"></script>
+
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
@@ -183,6 +224,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+	<script src="map.js"></script>
 
 
 

@@ -1,5 +1,5 @@
 // Initialize map
-const map = L.map('map').setView([44.4949, 11.3426], 12);
+const map = L.map('map').setView([44.4949, 11.3426], 11.4);
 
 // Use a minimal basemap (CartoDB Positron)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
