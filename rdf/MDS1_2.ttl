@@ -21,8 +21,8 @@
             dcat:keyword "environment policy"@en, "transport policy"@en, "terrestial transport"@en, "Bologna"@en;
             dcat:keyword  "politica dell'ambiente"@it, "politica dei trasporti"@it, trasporti terrestri"@it, "Bologna"@it;
 
-            dct:modified "2025-05-29"^^xsd:date;
-            dct:issued "2025-05-29"^^xsd:date;
+            dct:modified "2025-06-06"^^xsd:date;
+            dct:issued "2025-06-06"^^xsd:date;
 
             dct:rightsHolder <https://github.com/krzywonos/oade-vroom>;
             dct:creator <https://github.com/krzywonos/oade-vroom/team/AhmadrezaNazari>;                        
@@ -33,7 +33,7 @@
 
             dct:language <http://publications.europa.eu/resource/authority/language/ITA/>;
 
-            dct:license <http://creativecommons.org/licenses/by/4.0/>;
+            dct:license <http://creativecommons.org/licenses/by/sa/4.0/>;
 
             prov:wasGeneratedBy <https://github.com/krzywonos/oade-vroom/activity/mashup>;
             prov:wasDerivedFrom <https://github.com/krzywonos/oade-vroom/original-datasets/DS1>,
@@ -47,10 +47,10 @@
             a skos:Concept;
             skos:prefLabel "Transport"@en.
 
-<http://creativecommons.org/licenses/by/4.0/>
+<http://creativecommons.org/licenses/by/sa/4.0/>
             a dct:LicenseDocument;
             dct:type <http://purl.org/adms/licencetype/Attribution>;
-            foaf:name "CC BY";
+            foaf:name "CC BY-SA";
             owl:versionInfo "4.0".
             
 <https://github.com/krzywonos/oade-vroom/activity/mashup>

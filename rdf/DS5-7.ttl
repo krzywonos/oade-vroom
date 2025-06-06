@@ -32,7 +32,7 @@
 
             dct:language <http://publications.europa.eu/resource/authority/language/ITA/>;
 
-            dct:license <http://creativecommons.org/licenses/by/4.0/>;
+            dct:license <http://creativecommons.org/licenses/by/sa/4.0/>;
 
             prov:wasDerivedFrom <https://www.amat-mi.it/it/agenzia/rapporto-qualita-aria>.
           
@@ -40,10 +40,10 @@
             a skos:Concept;
             skos:prefLabel "Environment"@en.
 
-<http://creativecommons.org/licenses/by/4.0/>
+<http://creativecommons.org/licenses/by/sa/4.0/>
             a dct:LicenseDocument;
             dct:type <http://purl.org/adms/licencetype/Attribution>;
-            foaf:name "CC BY";
+            foaf:name "CC BY-SA";
             owl:versionInfo "4.0".
             
 <Comune_di_Milano>

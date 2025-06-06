@@ -9,7 +9,7 @@
                     a dcat:Catalog;
                     dct:title "Vehicular Research on Output and Outcomes in Milan/Bologna - Catalogue"@en;
                     adms:identifier "vroomCatalogue"@en; 
-                    dct:description "Catalogue containing the mashup datasets for the VROOM project";
+                    dct:description "Catalogue containing the mashup datasets for the project Vehicular Research on Output and Outcomes in Milan/Bologna";
                     dct:publisher <https://github.com/krzywonos/oade-vroom>;
                     dct:issued "2025-06-06"^^xsd:date;  
                     dct:modified "2025-06-06"^^xsd:date;
@@ -22,7 +22,7 @@
                     dct:language <http://publications.europa.eu/resource/authority/language/ENG/>;
                     dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme/>;
                     
-                    dct:license	    <https://creativecommons.org/licenses/by-sa/4.0/>.
+                    dct:license	<https://creativecommons.org/licenses/by-sa/4.0/>.
 
 
 <https://github.com/krzywonos/oade-vroom> 
