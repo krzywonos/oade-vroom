@@ -108,6 +108,53 @@
 			</div>
 		</nav>
 
+		<!-- Button to top-->
+
+					<a href="#" id="backToTop"><img src="images/arrow_up.png" alt="Back to top" style="width: 24px; height: 24px; filter: invert(1);"></a>
+						<style>
+							#backToTop {
+								position: fixed;
+								bottom: 10px;
+								right: 10px;
+								width: 50px;
+								height: 50px;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								background-color: #45558d;
+								color: white;
+								font-size: 24px;
+								border-radius: 50%;
+								cursor: pointer;
+								opacity: 0;
+								pointer-events: none;
+								transition: opacity 0.3s ease;
+								z-index: 9999;
+							}
+						</style>
+
+
+						<script>
+						const backToTop = document.getElementById('backToTop');
+
+						window.addEventListener('scroll', () => {
+							const scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+							if (scrollPos > 1) {
+							backToTop.style.opacity = '1';
+							backToTop.style.pointerEvents = 'auto';
+							} else {
+							backToTop.style.opacity = '0';
+							backToTop.style.pointerEvents = 'none';
+							}
+						});
+
+						backToTop.addEventListener('click', (e) => {
+							e.preventDefault();
+							window.scrollTo({ top: 0, behavior: 'smooth' });
+						});
+						</script>
+
+
 		<!-- Wrapper -->
 		<section id="wrapper">
 			<header>
