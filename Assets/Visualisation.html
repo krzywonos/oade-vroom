@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="graph_pollutants.js"></script>
 	<style>
 		#map {
 			height: 30vw;
@@ -26,6 +28,18 @@
 			/* Max width for larger screens */
 
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
+			border-radius: 10px;
+		}
+
+		#graph_pol {
+			height: 100%;
+			width: 100%;
+			position: relative;
+
+			/* Max width for larger screens */
+
+			border-radius: 10px;
 			margin-bottom: 20px;
 			border-radius: 10px;
 		}
@@ -144,6 +158,11 @@
 						<label for="yearSlider">Select Year:</label>
 						<div id="yearSlider"></div>
 						<span id="currentYearDisplay"></span>
+					</div>
+					<h3 class="major">Air Pollutants comparison</h3>
+					<p>A graph showing concentrations of Benzene (C6H6) and CO for both cities</p>
+					<div id="graph_pol">
+						<div id="plot"></div>
 					</div>
 				</div>
 			</div>
