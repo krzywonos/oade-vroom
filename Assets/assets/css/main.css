@@ -2416,11 +2416,14 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+		object-fit: cover;
 	}
 
 		.image img {
 			border-radius: 5px;
 			display: block;
+			object-fit: cover;
+			
 		}
 
 		.image.left, .image.right {
