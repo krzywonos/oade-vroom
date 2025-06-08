@@ -48,8 +48,8 @@
 		<section id="wrapper">
 			<header>
 				<div class="inner">
-					<h2>Generic</h2>
-					<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
+					<h2>DATASETS</h2>
+					<p>This page contains an overview of every dataset which is used in this project. The datasets are related to two countries and are divided into two categories. The one related to air quality index and the others related to public and private transportation.</p>
 				</div>
 			</header>
 
@@ -57,43 +57,697 @@
 			<div class="wrapper">
 				<div class="inner">
 
-					<h3 class="major">Lorem ipsum dolor</h3>
-					<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean
-						tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex
-						tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas
-						sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt
-						bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo.
-						Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt.
-						Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
+					<h3 class="major">Original Datasets</h3>
+					
+					<h4 class="major">Ds1: Centraline qualità dell'aria - Bologna</h4>
+					<p>Air quality data from 2017 to 2024, relating to the three monitoring stations located in the municipality of Bologna. The data were processed starting from those made available by ARPAE Emilia Romagna, which can be consulted at the following address.</p>
+					<p>
+						The stations are the following:
+						
+						<ol>
+							<li>Giardini Margherita</li>
+							<li>Via Chiarini</li>
+							<li>Porta San Felice</li>
+						</ol>
+					</p>
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS1 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Source</th>
+									<th>Distribution</th>
+									
+								</tr>
+								<tr>
+									<th>Centraline qualità dell'aria</th>
+									<th><a href="Analysis.html#metadata-complete" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://opendata.comune.bologna.it/explore/dataset/dati-centraline-bologna-storico/information/?disjunctive.agente" target="_blank">Original Dataset URL</a></th>
+									<th><a href="https://opendata.comune.bologna.it/api/explore/v2.1/catalog/datasets/dati-centraline-bologna-storico/exports/csv?lang=it&timezone=Europe%2FRome&use_labels=true&delimiter=%3B">CSV&nbsp;&nbsp;</a><a href="https://opendata.comune.bologna.it/api/explore/v2.1/catalog/datasets/dati-centraline-bologna-storico/exports/json?lang=it&timezone=Europe%2FRome">&nbsp;&nbsp;JSON&nbsp;&nbsp;</a><a href="https://opendata.comune.bologna.it/api/explore/v2.1/catalog/datasets/dati-centraline-bologna-storico/exports/xlsx?lang=it&timezone=Europe%2FRome&use_labels=true">&nbsp;&nbsp;Excel</a></th>
+								</tr>
 
-					<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem.
-						Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu
-						faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec
-						commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit.
-						Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec
-						felis elementum varius.</p>
+							</tbody>
+						</table>
+					</div>
 
-					<h3 class="major">Vitae phasellus</h3>
-					<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat.
-						Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem
-						lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS1 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th>COD_STAZ</th>
+									<th>AGENTE</th>
+									<th>DATA_INIZIO</th>
+									<th>DATA_FINE</th>
+									<th>VALORE</th>	
+									<th>UM</th>					
+								</tr>
 
-					<section class="features">
-						<article>
-							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-							<h3 class="major">Sed feugiat lorem</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
-								ultrices.</p>
-							<a href="#" class="special">Learn more</a>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-							<h3 class="major">Nisl placerat</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
-								ultrices.</p>
-							<a href="#" class="special">Learn more</a>
-						</article>
-					</section>
+								<tr>
+									<th>PORTA SAN FELICE</th> 	<th>C6H6 (BENZENE)</th>	<th>2023-10-04T13:01:00+02:00</th>	<th>2023-10-04T14:00:00+02:00</th>	<th>0.7</th>	<th>ug/m3</th>				
+								</tr>
+
+								<tr>
+									<th>GIARDINI MARGHERITA</th> 	<th>O3 (OZONO)</th>	<th>2023-10-04T13:01:00+02:00</th>	<th>2023-10-04T14:00:00+02:00</th>	<th>103</th>	<th>ug/m3</th>				
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<h4 class="major">Ds2</h4>
+					<p>Circulating fleet of the Municipality of Bologna divided by postal code of residence of the owner.</p>
+
+					<ul>For each postal code the quantities are indicated for:
+						<li>Reference year</li>
+						<li>Fuel</li>
+						<li>Owner age</li>
+						<li>Euro standard</li>
+						<li>Owner/company gender</li>
+						<li>Vehicle age</li>
+					</ul>
+
+					<p>The data are the result of an agreement between the Municipality of Bologna and ACI whose complete data are available on the pages</p>
+					
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS2 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Source</th>
+									<th>Distribution</th>
+									
+								</tr>
+								<tr>
+									<th>Parco circolante veicoli</th>
+									<th><a href="Analysis.html#DS2" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://opendata.comune.bologna.it/explore/dataset/parco-circolante-veicoli/information/" target="_blank">Original Dataset URL</a></th>
+									<th><a href="https://opendata.comune.bologna.it/api/explore/v2.1/catalog/datasets/parco-circolante-veicoli/exports/csv?lang=it&timezone=Europe%2FRome&use_labels=true&delimiter=%3B">CSV&nbsp;&nbsp;</a><a href="https://opendata.comune.bologna.it/api/explore/v2.1/catalog/datasets/parco-circolante-veicoli/exports/json?lang=it&timezone=Europe%2FRome">&nbsp;&nbsp;JSON&nbsp;&nbsp;</a><a href="https://opendata.comune.bologna.it/api/explore/v2.1/catalog/datasets/parco-circolante-veicoli/exports/xlsx?lang=it&timezone=Europe%2FRome&use_labels=true">&nbsp;&nbsp;Excel</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="table-wrapper">
+						<table class="alt">
+
+							<caption style="text-align: left;">DS2 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th>Anno</th>	
+									<th>CAP</th>	
+									<th>totale_veicoli</th>	
+									<th>BENZINA</th>	
+									<th>BENZINA E GAS LIQUIDO</th>	<th>BENZINA E METANO</th>	
+									<th>ELETTRICITA</th>	
+									<th>GASOLIO</th>	
+									<th>IBRIDO BENZINA</th>	
+									<th>IBRIDO GASOLIO</th>	
+									<th>METANO</th>	
+									<th>ALTRE ALIMENTAZIONI</th>	
+									<th>ALIMENTAZIONE NON DEFINITO</th>	
+									<th>18 - 25 ANNI</th>
+									<th>26 - 35 ANNI</th>	
+									<th>36 - 50 ANNI</th>	
+									<th>51 - 60 ANNI</th>	
+									<th>61 - 70 ANNI</th>	
+									<th>0 - 17 ANNI</th>	
+									<th>ETÀ NON CONTEMPLATO</th>	
+									<th>ETÀ NON DEFINITO</th>	
+									<th>OLTRE 70 ANNI</th> 	
+									<th>EURO 0</th>	
+									<th>EURO 1</th>	
+									<th>EURO 2</th>	
+									<th>EURO 3</th>	
+									<th>EURO 4</th>	
+									<th>EURO 5</th>	
+									<th>EURO 5B</th>	
+									<th>EURO 6</th>	
+									<th>EURO 6A</th>	
+									<th>EURO 6B</th>	
+									<th>EURO 6C</th>	
+									<th>EURO 6D</th>	
+									<th>EURO NON CONTEMPLATO</th>	
+									<th>EURO NON DEFINITO</th>	
+									<th>SESSO FEMMINILE</th>	
+									<th>SESSO MASCHILE</th>	
+									<th>SESSO ND</th>	
+									<th>SOCIETÀ PA</th>
+									<th>SOCIETÀ SAPA</th>	
+									<th>SOCIETÀ SAS</th>	
+									<th>SOCIETÀ SNC</th>	
+									<th>SOCIETÀ SOC</th>	
+									<th>SOCIETÀ SPA</th>	
+									<th>SOCIETÀ SRL</th>	
+									<th>SOCIETÀ SURL</th>	
+									<th>SRLS</th>	
+									<th>ANZIANITÀ VEICOLO 0 - 1 ANNI</th>	
+									<th>ANZIANITÀ VEICOLO 2 – 3 ANNI</th>	
+									<th>ANZIANITÀ VEICOLO 4 – 5 ANNI</th> 	
+									<th>ANZIANITÀ VEICOLO 6 – 7 ANNI</th>	
+									<th>ANZIANITÀ VEICOLO 8 – 9 ANNI</th>	
+									<th>ANZIANITÀ VEICOLO 10 - 12 ANNI</th>	
+									<th>ANZIANITÀ VEICOLO 13 - 15 ANNI</th>	
+									<th>ANZIANITÀ VEICOLO OLTRE 15 ANNI</th>	
+									<th>ANZIANITÀ VEICOLO NON DEFINITO</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					
+					<h4 class="major" style="padding-top: 5rem;">Ds3: public transportation per fuel type - Bologna</h4>
+					<p>This dataset contains total urban vehicle fleet - Vehicles in actual service as of 12/31 of each year.
+						Battery hybrids. with storage batteries to power the electric traction motor
+						Diesel hybrids: the heat engine has the sole function of producing the energy needed to operate the electric traction motor without any battery intended for storage
+						The Urban Service includes the Bologna Urban Service and the Other Municipalities Urban Service.</p>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS3 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Source</th>
+									<th>Distribution</th>
+									
+								</tr>
+								<tr>
+									<th>TPER Spa. Parco vetture - Numero mezzi urbani per alimentazione - serie storica</th>
+									<th><a href="Analysis.html#DS3" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://inumeridibolognametropolitana.it/dati-statistici/tper-spa-parco-vetture-numero-mezzi-urbani-alimentazione-serie-storica" target="_blank">Original Dataset URL</a></th>
+									<th><a href="https://github.com/krzywonos/oade-vroom/blob/main/original-datasets/ds3.csv">CSV</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div>
+						<table class="alt">
+							<caption>DS3 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th></th>
+									<th>Diesel</th>	
+									<th>Diesel</th>	
+									<th>Elettrico</th>	
+									<th>Gas naturale</th> 	
+									<th>Gas naturale</th> 	
+									<th>Totale</th>
+								</tr>
+
+								<tr>
+									<th>Anno</th>	
+									<th>Ibrido</th>	
+									<th>NON ibrido</th>	
+									<th>NON ibrido</th>	
+									<th>Ibrido</th>	
+									<th>NON ibrido</th>	
+									<th>Totale</th>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+
+					<h4 class="major">Ds4: number of passengers on public transportation - Bologna</h4>
+					<p>This dataset contains information about number of passengers in the urban area of the municipality of Bologan. The dataset has numbers related to urban service and interurban service. The numbers shows the situation in 31/12 of every year</p>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS4 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Source</th>
+									<th>Distribution</th>
+									
+								</tr>
+								<tr>
+									<th>TPER Spa. Numero di viaggiatori trasportati - Bacino di Bologna - serie storica</th>
+									<th><a href="Analysis.html#DS4" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://inumeridibolognametropolitana.it/dati-statistici/tper-spa-numero-di-viaggiatori-trasportati-bacino-di-bologna-serie-storica" target="_blank">Original Dataset URL</a></th>
+									<th><a href="https://github.com/krzywonos/oade-vroom/blob/main/original-datasets/ds4.csv">CSV</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div>
+						<table class="alt">
+							<caption>DS4 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th></th>
+									<th>Servizio Urbano</th>	
+									<th>Servizio Urbano</th>	
+									<th>Servizio Urbano</th>	
+									<th>Servizio Interurbano</th>	
+									<th>Totale Bacino Bologna</th> 
+								</tr>
+
+								<tr>
+									<th>Anno</th>	
+									<th>Bologna</th>	
+									<th>Altro comune</th>	
+									<th>Totale</th>
+
+
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+
+					<h4 class="major">Ds5: Air quality survey 2024 - Milano</h4>
+					<p>The dataset shows the data of the Daily Air Quality Report of the Municipality of Milan drawn up by AMAT, based on the data measured and validated daily by Arpa Lombardia from the institutional air quality stations present in the municipal territory.<p>
+					<p>These stations are as follows:</p>
+					<ol>
+						<li>via Pascal*</li> 
+						<li>p.le Abbiategrasso</li> 
+						<li>viale Liguria</li>
+						<li>viale Marche</li>
+						<li>Parco Lambro</li>
+						<li>via Senato*</li> 
+						<li>Verziere</li>
+						<li>p.le Zavattari</li>
+						<li>via Juvara</li>
+					</ol>
+
+					
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS5 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Source</th>
+									<th>Distribution</th>
+									
+								</tr>
+								<tr>
+									<th>Rilevazione qualità aria 2024</th>
+									<th><a href="Analysis.html#DS5 target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://dati.comune.milano.it/dataset/ds407-rilevazione-qualita-aria-2024" target="_blank">Original Dataset URL</a></th>
+									<th><a href="https://dati.comune.milano.it/dataset/dba6b6ff-792b-471d-9a2c-a625f1398f5f/resource/1fb5966e-4d73-4d41-8e1a-4f9a36d6dab2/download/qaria_datoariagiornostazione_2024-12-24.csv">CSV&nbsp;&nbsp;</a><a href="https://dati.comune.milano.it/dataset/dba6b6ff-792b-471d-9a2c-a625f1398f5f/resource/bcef81c8-4011-4225-93ee-f284387e8834/download/qaria_datoariagiornostazione_2024-12-24.json">&nbsp;&nbsp;JSON&nbsp;&nbsp;</a><a href="https://dati.comune.milano.it/datastore/dump/1fb5966e-4d73-4d41-8e1a-4f9a36d6dab2?format=xml">&nbsp;&nbsp;XML</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS5 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th>stazione_id</th>	
+									<th>data</th>	
+									<th>inquinante</th>	
+									<th>valore</th>
+								</tr>
+
+								<tr>
+									<th>1</th>	
+									<th>2017-01-09</th>	
+									<th>NO2</th>	
+									<th>41</th>
+								</tr>
+
+								<tr>
+									<th>3</th>	
+									<th>2017-01-09</th>	
+									<th>NO2</th>	
+									<th>98</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+
+					<h4 class="major">Ds6: Low emission buses used for local public transport - Milano</h4>
+					<p>Low-emission buses used for local public transport - indicator per 100 buses and absolute value - Historical series</p>
+					<P>The dataset shows, starting from 2014, the low-emission buses used for local public transport in the Municipality of Milan (indicator per 100 buses used and absolute value).</p>
+
+					<p>Electric buses (hybrid or all-electric traction, including those powered by hydrogen with fuel cell technology) and gas-powered buses (with bi-fuel petrol/methane or petrol/LPG engine) are considered low-emission.</p>
+
+					<p>Dataset extrapolated from tables 7.1-7.2 Urban Mobility Istat.</p>
+					
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS6 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Source</th>
+									<th>Distribution</th>
+									
+								</tr>
+								<tr>
+									<th>Autobus a basse emissioni</th>
+									<th><a href="Analysis.html#DS6" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://dati.comune.milano.it/dataset/ds1570-autobus-basse-emissioni-serie-storica" target="_blank">Original Dataset URL</a></th>
+									<th><a href="https://dati.comune.milano.it/dataset/cdacb96e-42f9-42bd-9776-4d5197b7ed4a/resource/8b6be5f8-e6f0-409f-aa9d-2ea1d2c1bbb9/download/ds1570_autobus_basse_emissioni.csv">CSV&nbsp;&nbsp;</a><a href="https://dati.comune.milano.it/dataset/cdacb96e-42f9-42bd-9776-4d5197b7ed4a/resource/b47a27e1-d011-4421-8261-24758eaa2ede/download/ds1570_autobus_basse_emissioni.json">&nbsp;&nbsp;JSON&nbsp;&nbsp;</a><a href="https://dati.comune.milano.it/datastore/dump/8b6be5f8-e6f0-409f-aa9d-2ea1d2c1bbb9?format=xml">&nbsp;&nbsp;XML</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+
+					
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS6 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th>Anno</th>	
+									<th>Autobus a basse emissioni - indicatore per 100 autobus</th> 	
+									<th>Autobus a basse emissioni - valore assoluto</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					
+					<h4 class="major">Ds7: Buses used for local public transport by emission class - Milano</h4>
+					<p>Buses used for local public transport by emission class - Percentage composition - Historical series</p>
+					<p>The dataset shows, starting from the year 2015, the buses used for local public transport in the municipality of Milan (percentage composition) by emission class (Euro 4 or lower, Euro 5, Euro 6).</p>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS7 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Source</th>
+									<th>Distribution</th>
+									
+								</tr>
+								<tr>
+									<th>Autobus utilizzati per il trasporto pubblico locale per classe di emissione</th>
+									<th><a href="Analysis.html#DS7" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://dati.comune.milano.it/dataset/ds1568-autobus-per-classe-di-emissione-composizione-percentuale-serie-storica" target="_blank">Original Dataset URL</a></th>
+									<th><a href="https://dati.comune.milano.it/dataset/2f6b8ca2-f621-4d24-b57c-8422fb8d3231/resource/75ee8ba3-4b54-4f70-825f-4aa3fd3d4966/download/ds1568_autobus_classe_emissione_percentuale.csv">CSV&nbsp;&nbsp;</a><a href="https://dati.comune.milano.it/dataset/2f6b8ca2-f621-4d24-b57c-8422fb8d3231/resource/db44142e-1740-4c17-9ced-8b4bda46c614/download/ds1568_autobus_classe_emissione_percentuale.json">&nbsp;&nbsp;JSON&nbsp;&nbsp;</a><a href="https://dati.comune.milano.it/datastore/dump/75ee8ba3-4b54-4f70-825f-4aa3fd3d4966?format=xml">&nbsp;&nbsp;XML</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+					
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS7 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th>Anno</th>	
+									<th>Classe di emissione</th>	
+									<th>Percentuale autobus utilizzati</th> 
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h4 class="major">Ds8: Annual passengers per inhabitant - Milano</h4>
+						<p>TPL demand - Annual passengers per inhabitant - historical series</p>
+						<p>The dataset shows, starting from 2013, the demand for local public transport, quantified in annual passengers per inhabitant, in the Municipality of Milan</p>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS8 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Source</th>
+									<th>Distribution</th>
+									
+								</tr>
+								<tr>
+									<th>Domanda di TPL - Passeggeri annui per abitante</th>
+									<th><a href="Analysis.html#DS8" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://dati.comune.milano.it/dataset/ds1547-domanda-di-tpl-passeggeri-annui-per-abitante-serie-storica" target="_blank">Original Dataset URL</a></th>
+									<th><a href="https://dati.comune.milano.it/dataset/1de620a1-58a9-4c7c-8bbb-5de804ecd834/resource/d53fc1d6-fbc7-4528-bb0f-216561fc9dd0/download/ds1547_passeggeri_annui_per_abitante.csv">CSV&nbsp;&nbsp;</a><a href="https://dati.comune.milano.it/dataset/1de620a1-58a9-4c7c-8bbb-5de804ecd834/resource/8357d370-ca25-416b-be9a-835f4e5e5bcf/download/ds1547_passeggeri_annui_per_abitante.json">&nbsp;&nbsp;JSON&nbsp;&nbsp;</a><a href="https://dati.comune.milano.it/datastore/dump/d53fc1d6-fbc7-4528-bb0f-216561fc9dd0?format=xml">&nbsp;&nbsp;XML</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+					
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS8 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th>Anno</th>	
+									<th>Domanda di TPL - Passeggeri annui per abitante</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h4 class="major">Ds9: Vehicle fleet 2004-2022 - Milano</h4>
+					<p>The dataset includes the number of vehicles in circulation starting from 2004. The vehicles are divided into the following categories:</p>
+					<ul>
+						<li>BUSES</li>
+						<li>TRUCKS FOR THE TRANSPORT OF GOODS</li>
+						<li>SPECIAL VEHICLES - SPECIFIC</li>
+						<li>CARS</li>
+						<li>MOTORCYCLES AND QUADRICYCLES FOR THE TRANSPORT OF GOODS</li>
+						<li>MOTORCYCLES</li>
+						<li>MOTORCYCLES AND SPECIAL QUADRICYCLES - SPECIFIC</li>
+						<li>TRAILERS AND SEMI-TRAILERS FOR THE TRANSPORT OF GOODS</li>
+						<li>TRUCK UNITS OR TRACTORS</li>
+						<li>OTHER VEHICLES</li>
+					</ul>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS9 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Source</th>
+									<th>Distribution</th>
+									
+								</tr>
+								<tr>
+									<th>Parco veicoli circolanti 2004-2022</th>
+									<th><a href="Analysis.html#DS9" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://dati.comune.milano.it/dataset/ds721-parco-veicoli-circolanti" target="_blank">Original Dataset URL</a></th>
+									<th><a href="https://dati.comune.milano.it/dataset/cab0923e-3d30-48b0-af54-a5f9405898d5/resource/7d95467d-6981-4c25-b15b-c7b83c4459b5/download/ds721_parco-veicoli-circolanti-suddivisi-per-categoria-2004-2022.csv">CSV&nbsp;&nbsp;</a><a href="https://dati.comune.milano.it/dataset/cab0923e-3d30-48b0-af54-a5f9405898d5/resource/6e28cc4e-54a9-46e6-a6cd-5411382370bb/download/ds721_parco-veicoli-circolanti-suddivisi-per-categoria-2004-2022.json">&nbsp;&nbsp;JSON&nbsp;&nbsp;</a><a href="https://dati.comune.milano.it/datastore/dump/7d95467d-6981-4c25-b15b-c7b83c4459b5?format=xml">&nbsp;&nbsp;XML</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>DS9 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th>Anno</th>	
+									<th>AUTOBUS</th>	
+									<th>AUTOCARRI</th> 
+									<th>TRASPORTO MERCI</th>	
+									<th>AUTOVEICOLI SPECIALI - SPECIFICI</th>	
+									<th>AUTOVETTURE</th>
+									<th>MOTOCARRI E QUADRICICLI TRASPORTO MERCI</th> 	
+									<th>MOTOCICLI</th>	
+									<th>MOTOVEICOLI E QUADRICICLI SPECIALI - SPECIFICI</th> 	
+									<th>RIMORCHI E SEMIRIMORCHI  SPECIALI - SPECIFICI</th> 	
+									<th>RIMORCHI E SEMIRIMORCHI  TRASPORTO MERCI</th>	
+									<th>TRATTORI STRADALI O MOTRICI</th>	
+									<th>ALTRI VEICOLI</th>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h3 class="major" style="padding-top: 5rem;">Mashup Datasets</h3>
+					<p>In our study we have produced three Mashup datasets using nine datasets mentioned above.</p>
+
+
+					<h4 class="major">MD1: Air quality and vehicle data for Bologna</h4>
+					<p>This dataset is a Masuhp of datasets air quality and various vehicle data (power types of private vehicles, public transport buses efficiency, etc.) for Municipality of Bologna, between the years 2017-2024. The original datasets used for the mashup are DS1, 2, 3 & 4.</p>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>MD1 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Distribution</th>
+								</tr>
+								<tr>
+									<th>Air quality and vehicle data for Bologna (2017-2024)</th>
+									<th><a href="Analysis.html#MD1" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://github.com/krzywonos/oade-vroom/blob/main/mashup-datasets/MD1.csv">CSV</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>MD1 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th>DATE</th>	
+									<th>C6H6 (BENZENE)</th>	
+									<th>CO (MONOSSIDO DI CARBONIO)</th>	
+									<th>NO (MONOSSIDO DI AZOTO)</th>	
+									<th>NO2 (BIOSSIDO DI AZOTO)</th>	
+									<th>NOX (OSSIDI DI AZOTO)</th>
+									<th>PM10</th>	
+									<th>PM2.5</th>	
+									<th>TOTAL VEHICLES</th>	
+									<th>BENZINA</th>	
+									<th>BENZINA E GAS LIQUIDO</th>	
+									<th>BENZINA E METANO</th>	
+									<th>ELETTRICITA</th>	
+									<th>GASOLIO</th>	
+									<th>IBRIDO BENZINA</th>	
+									<th>IBRIDO GASOLIO</th>	
+									<th>METANO</th>	
+									<th>Diesel_Ibrido</th>	
+									<th>Diesel_NON ibrido</th> 	
+									<th>Elettrico_NON ibrido</th>	
+									<th>Gas naturale_Ibrido</th> 	
+									<th>Gas naturale_NON ibrido</th> 	
+									<th>TOTAL PUBLIC FLEET</th>	
+									<th>URBAN PASSENGERS BOLOGNA</th>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+
+					<h4 class="major" style="padding-top: 5rem;">MD2: Air quality and vehicle data for Milan</h4>
+					<p>This dataset is a Masuhp of datasets air quality and various vehicle data (power types of private vehicles, public transport buses efficiency, etc.) for Municipality of Milan, between the years 2017-2024. The original datasets used for the mashup are DS5, 6, 7, 8 & 9.</p>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>MD2 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Distribution</th>
+								</tr>
+								<tr>
+									<th>Air quality and vehicle data for Milan (2017-2024)</th>
+									<th><a href="Analysis.html#MD2" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://github.com/krzywonos/oade-vroom/blob/main/mashup-datasets/MD2.csv">CSV</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>MD1 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th>DATE</th>	
+									<th>C6H6 (BENZENE)</th>	
+									<th>CO (MONOSSIDO DI CARBONIO)</th>	
+									<th>NO2 (DIOSSIDO DI AZOTO)</th>	
+									<th>O3 (OZONO)</th> 	
+									<th>PM10</th>	
+									<th>PM25</th>	
+									<th>SO2 (DIOSSIDO DI SULFURIO)</th> 	
+									<th>Autobus a basse emissioni - indicatore per 100 autobus</th>	
+									<th>Autobus a basse emissioni - valore assoluto</th> 	
+									<th>Bus Euro 4 o inferiore</th>	
+									<th>Bus Euro 5</th>	
+									<th>Bus Euro 6</th>	
+									<th>URBAN PASSENGERS MILAN</th>	
+									<th>AUTOBUS</th>	
+									<th>AUTOCARRI TRASPORTO MERCI</th> 	
+									<th>AUTOVEICOLI SPECIALI - SPECIFICI</th>	
+									<th>AUTOVETTURE</th>	
+									<th>MOTOCARRI E QUADRICICLI TRASPORTO MERCI</th>	
+									<th>MOTOCICLI</th>	
+									<th>MOTOVEICOLI E QUADRICICLI SPECIALI - SPECIFICI</th>
+									<th>RIMORCHI E SEMIRIMORCHI  SPECIALI - SPECIFICI</th>
+									<th>RIMORCHI E SEMIRIMORCHI  TRASPORTO MERCI</th>	
+									<th>TRATTORI STRADALI O MOTRICI</th>	
+									<th>ALTRI VEICOLI</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h4 class="major" style="padding-top: 5rem;">MDS1_2: Air quality and vehicle registration data per CAP for Bologna</h4>
+					<p>This dataset is a Masuhp of air quality and registration of vehicles per CAP for Municipality of Bologna Datasets, between the years 2019-2024. The original datasets used for the mashup are DS1 and DS2.</p>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>MDS1_2 Overview</caption>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<th>Metadata</th>
+									<th>Distribution</th>
+								</tr>
+								<tr>
+									<th>Air quality and vehicle data for Milan (2017-2024)</th>
+									<th><a href="Analysis.html#MDS1_2" target="_blank">View Dataset Metadata</a></th>
+									<th><a href="https://github.com/krzywonos/oade-vroom/blob/main/mashup-datasets/MDS1_2.csv">CSV</a></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<caption>MDS1_2 Column Headers</caption>
+							<tbody>
+								<tr>
+									<th>DATE</th>	
+									<th>C6H6 (BENZENE)_PORTA SAN FELICE</th>	
+									<th>CO (MONOSSIDO DI CARBONIO)_PORTA SAN FELICE</th>	
+									<th>NO (MONOSSIDO DI AZOTO)_PORTA SAN FELICE</th>	
+									<th>NO2 (BIOSSIDO DI AZOTO)_GIARDINI MARGHERITA</th>	
+									<th>NO2 (BIOSSIDO DI AZOTO)_PORTA SAN FELICE</th>	 
+									<th>NO2 (BIOSSIDO DI AZOTO)_VIA CHIARINI</th>	
+									<th>NOX (OSSIDI DI AZOTO)_PORTA SAN FELICE</th>	
+									<th>PM10_GIARDINI MARGHERITA</th>	
+									<th>PM10_PORTA SAN FELICE</th>	
+									<th>PM10_VIA CHIARINI</th>	
+									<th>PM2.5_GIARDINI MARGHERITA</th>	
+									<th>PM2.5_PORTA SAN FELICE</th>	
+									<th>40121</th>	
+									<th>40122</th>	
+									<th>40123</th>	
+									<th>40124</th>	
+									<th>40125</th>	
+									<th>40126</th>	
+									<th>40127</th>	
+									<th>40128</th>	
+									<th>40129</th>	
+									<th>40131</th>	
+									<th>40132</th>	
+									<th>40133</th>	
+									<th>40134</th>	
+									<th>40135</th>	
+									<th>40136</th>	
+									<th>40137</th>	
+									<th>40138</th>	
+									<th>40139</th>	
+									<th>40141</th>	
+									<th>ND</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 
 				</div>
 			</div>
@@ -103,41 +757,6 @@
 		<!-- Footer -->
 		<section id="footer">
 			<div class="inner">
-				<h2 class="major">Get in touch</h2>
-				<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce
-					tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in
-					tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-				<form method="post" action="#">
-					<div class="fields">
-						<div class="field">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
-						</div>
-						<div class="field">
-							<label for="email">Email</label>
-							<input type="email" name="email" id="email" />
-						</div>
-						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="4"></textarea>
-						</div>
-					</div>
-					<ul class="actions">
-						<li><input type="submit" value="Send Message" /></li>
-					</ul>
-				</form>
-				<ul class="contact">
-					<li class="icon solid fa-home">
-						Untitled Inc<br />
-						1234 Somewhere Road Suite #2894<br />
-						Nashville, TN 00000-0000
-					</li>
-					<li class="icon solid fa-phone">(000) 000-0000</li>
-					<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-					<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-					<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-					<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-				</ul>
 				<ul class="copyright">
 					<li>&copy; Untitled Inc. All rights reserved.</li>
 					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
