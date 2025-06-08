@@ -1,5 +1,5 @@
 // Initialize map
-const map = L.map('map').setView([44.4949, 11.3426], 11.4);
+const map = L.map('map').setView([44.4949, 11.3426], 11);
 
 // Use a minimal basemap (CartoDB Positron)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -79,13 +79,16 @@ function addMask(geojson) {
         map.removeLayer(maskLayer);
     }
 
-    const polygonFeatures = geojson.features.filter(
-        feature => feature.geometry &&
-            (feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon')
-    );
+    // Filter out non-Polygon/MultiPolygon features before masking
+    const polygonFeatures = {
+        type: 'FeatureCollection',
+        features: geojson.features.filter(feature =>
+            feature.geometry && (feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon')
+        )
+    };
 
-    if (polygonFeatures.length === 0) {
-        console.warn("No Polygon or MultiPolygon features found. Skipping mask.");
+    if (polygonFeatures.features.length === 0) {
+        console.warn("No Polygon or MultiPolygon features found in GeoJSON for masking. Skipping mask creation.");
         return;
     }
 
@@ -97,22 +100,8 @@ function addMask(geojson) {
         bounds.getNorth() + 1
     ]);
 
-    let unioned = polygonFeatures[0];
-    for (let i = 1; i < polygonFeatures.length; i++) {
-        try {
-            unioned = turf.union(unioned, polygonFeatures[i]);
-        } catch (e) {
-            console.warn(`Skipping invalid feature at index ${i}`, e);
-        }
-    }
-
-    if (!unioned || !['Polygon', 'MultiPolygon'].includes(unioned.geometry.type)) {
-        console.error("Final unioned geometry is not a Polygon or MultiPolygon:", unioned);
-        return;
-    }
-
     try {
-        const masked = turf.difference(bboxPolygon, unioned);
+        const masked = turf.difference(bboxPolygon, polygonFeatures);
 
         if (masked) {
             maskLayer = L.geoJSON(masked, {
@@ -124,11 +113,11 @@ function addMask(geojson) {
             }).addTo(map);
         }
     } catch (e) {
-        console.error("Error creating mask with turf.difference:", e);
+        console.error("Error creating mask with turf.difference. This might be due to invalid input geometries after filtering:", e);
+        console.error("Input bboxPolygon for turf.difference:", bboxPolygon);
+        console.error("Input polygonFeatures for turf.difference:", polygonFeatures);
     }
 }
-
-
 
 // Function to update the map based on the selected year
 function updateMap(year) {
