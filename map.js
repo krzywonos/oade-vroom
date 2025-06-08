@@ -79,15 +79,11 @@ function addMask(geojson) {
         map.removeLayer(maskLayer);
     }
 
-    // Filter out non-Polygon/MultiPolygon features before masking
-    const polygonFeatures = {
-        type: 'FeatureCollection',
-        features: geojson.features.filter(feature =>
-            feature.geometry && (feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon')
-        )
-    };
+    const polygonFeatures = geojson.features.filter(
+        feature => feature.geometry && (feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon')
+    );
 
-    if (polygonFeatures.features.length === 0) {
+    if (polygonFeatures.length === 0) {
         console.warn("No Polygon or MultiPolygon features found in GeoJSON for masking. Skipping mask creation.");
         return;
     }
@@ -100,8 +96,14 @@ function addMask(geojson) {
         bounds.getNorth() + 1
     ]);
 
+    // Combine all features into a single (multi)polygon
+    const combined = turf.combine({
+        type: "FeatureCollection",
+        features: polygonFeatures
+    });
+
     try {
-        const masked = turf.difference(bboxPolygon, polygonFeatures);
+        const masked = turf.difference(bboxPolygon, combined);
 
         if (masked) {
             maskLayer = L.geoJSON(masked, {
@@ -113,11 +115,10 @@ function addMask(geojson) {
             }).addTo(map);
         }
     } catch (e) {
-        console.error("Error creating mask with turf.difference. This might be due to invalid input geometries after filtering:", e);
-        console.error("Input bboxPolygon for turf.difference:", bboxPolygon);
-        console.error("Input polygonFeatures for turf.difference:", polygonFeatures);
+        console.error("Error creating mask with turf.difference:", e);
     }
 }
+
 
 // Function to update the map based on the selected year
 function updateMap(year) {
