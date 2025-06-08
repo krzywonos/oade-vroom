@@ -80,11 +80,12 @@ function addMask(geojson) {
     }
 
     const polygonFeatures = geojson.features.filter(
-        feature => feature.geometry && (feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon')
+        feature => feature.geometry &&
+            (feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon')
     );
 
     if (polygonFeatures.length === 0) {
-        console.warn("No Polygon or MultiPolygon features found in GeoJSON for masking. Skipping mask creation.");
+        console.warn("No Polygon or MultiPolygon features found. Skipping mask.");
         return;
     }
 
@@ -96,14 +97,22 @@ function addMask(geojson) {
         bounds.getNorth() + 1
     ]);
 
-    // Combine all features into a single (multi)polygon
-    const combined = turf.combine({
-        type: "FeatureCollection",
-        features: polygonFeatures
-    });
+    let unioned = polygonFeatures[0];
+    for (let i = 1; i < polygonFeatures.length; i++) {
+        try {
+            unioned = turf.union(unioned, polygonFeatures[i]);
+        } catch (e) {
+            console.warn(`Skipping invalid feature at index ${i}`, e);
+        }
+    }
+
+    if (!unioned || !['Polygon', 'MultiPolygon'].includes(unioned.geometry.type)) {
+        console.error("Final unioned geometry is not a Polygon or MultiPolygon:", unioned);
+        return;
+    }
 
     try {
-        const masked = turf.difference(bboxPolygon, combined);
+        const masked = turf.difference(bboxPolygon, unioned);
 
         if (masked) {
             maskLayer = L.geoJSON(masked, {
@@ -118,6 +127,7 @@ function addMask(geojson) {
         console.error("Error creating mask with turf.difference:", e);
     }
 }
+
 
 
 // Function to update the map based on the selected year
