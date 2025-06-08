@@ -5,8 +5,8 @@ const pollutants = [
 const datasetLabels = ["Bologna", "Milan"];
 
 const csvUrls = [
-    "/MD1.csv",  // First CSV (e.g., from Station 1)
-    "/MD2.csv"   // Second CSV (e.g., from Station 2)
+    "MD1.csv",  // First CSV (e.g., from Station 1)
+    "MD2.csv"   // Second CSV (e.g., from Station 2)
 ];
 
 function parseCSV(text) {
