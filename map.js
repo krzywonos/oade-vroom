@@ -7,7 +7,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 // Color scale function based on value
-function getColor(value) {
+function getColour(value) {
     if (value === null || value === undefined || isNaN(value)) return '#ccc'; // no data gray
 
     return value > 20000 ? '#800026' :
@@ -137,7 +137,7 @@ function updateMap(year) {
             const valueForYear = values[year] !== undefined ? values[year] : null;
 
             return {
-                color: getColor(valueForYear),
+                color: getColour(valueForYear),
                 weight: 2,
                 opacity: 0.8,
                 fillOpacity: 0.7
