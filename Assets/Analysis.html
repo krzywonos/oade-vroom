@@ -40,18 +40,74 @@
 						</div>
 					</nav>
 
+					<!-- Button to top-->
+
+					<a href="#" id="backToTop"><img src="images/arrow_up.png" alt="Back to top" style="width: 24px; height: 24px; filter: invert(1);"></a>
+						<style>
+							#backToTop {
+								position: fixed;
+								bottom: 10px;
+								right: 10px;
+								width: 50px;
+								height: 50px;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								background-color: #45558d;
+								color: white;
+								font-size: 24px;
+								border-radius: 50%;
+								cursor: pointer;
+								opacity: 0;
+								pointer-events: none;
+								transition: opacity 0.3s ease;
+								z-index: 9999;
+							}
+						</style>
+
+
+						<script>
+						const backToTop = document.getElementById('backToTop');
+
+						window.addEventListener('scroll', () => {
+							const scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+							if (scrollPos > 1) {
+							backToTop.style.opacity = '1';
+							backToTop.style.pointerEvents = 'auto';
+							} else {
+							backToTop.style.opacity = '0';
+							backToTop.style.pointerEvents = 'none';
+							}
+						});
+
+						backToTop.addEventListener('click', (e) => {
+							e.preventDefault();
+							window.scrollTo({ top: 0, behavior: 'smooth' });
+						});
+						</script>
+
+
 				<!-- Wrapper -->
 					<section id="wrapper">
 						<header>
-							<div class="inner">
+							<div class="inner" style="width: 90vw;">
 								<h2>Analysis</h2>
-								<p>This subpage contains four different kinds of analyses of the source datasets - legal, quality, ethical and technical. Technical analysis also contains further details about the created mashup datasets.</p>
+								<p>This subpage contains different sections that analyse the source datasets:</p>																				
+									<ul>
+										<li><a href="analysis.html#legal">Legal analysis</a></li>
+										<li><a href="analysis.html#ethical">Ethical analysis</a></li>
+										<li><a href="analysis.html#sustainability">Sustainability over time</a></li>
+										<li><a href="analysis.html#quality">Quality analysis</a></li>
+										<li><a href="analysis.html#technical">Technical analysis</a></li>
+									</ul>						
+								<p>The technical analysis also contains <a href="analysis.html#metadata-complete">further details</a> about the created mashup datasets.</p>
 							</div>
 						</header>
 
+						
 						<!-- Content -->
 							<div class="wrapper">
-								<div class="inner">
+								<div class="inner" style="width: 90vw;">
 
 									<h3 class="major" id="legal">Legal analysis</h3>
 									<h5>Privacy issues</h5>
@@ -644,7 +700,7 @@
 									<h5>Public Transport Passenger Numbers (ID - DS4)</h5>
 									<p>It is mentioned in the information section of the dataset that data shows the situation on 31/12 of each year. The data for 2024 is not updated and it is up-to-date until 2023.</p>
 									<h5>Air Quality Milan (ID - DS5)</h5>
-									<p>The data is being updated by the information released by Arpa Lombardia on a daily basis. The data is maintained well and is updated regularly.</p>
+									<p>The data is being updated by the information released by Arpa Lombardia on a daily basis. The data is maintained well and is updated regularly. Although due to a reason mentioned in the source website the data from 1 May to 30 September in 2024 is not available.</p>
 									<h5>Low Emission Bus Fleet in Milan (ID - DS6)</h5>
 									<p>The dataset has not been updated since 2018, and due to unknown reasons the new data on Bus Fleet in Milan is not inserted into the dataset.</p>
 									<h5>Buses by Emission Class (ID - DS7)</h5>
@@ -657,6 +713,7 @@
 									<br><br>
 
 									<h3 class="major" id="quality">Quality analysis</h3>
+									<p>The quality analysis of these datasets has been carried out following the europan standards applied by Italy <a href="https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/bozza/aspettiorg.html#qualita-dei-dati">UNI ISO/IEC 25012:2014.</a></p>
 									<div>
 										<table>
 											<thead>
@@ -933,7 +990,7 @@
 													<th>CC-BY-SA 4.0</th>
 													<th><a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS1.ttl">DS1.ttl</a></th>
 												</tr>
-												<tr>
+												<tr id="DS2">
 													<th>DS2</th>
 													<th>Vehicle fleet in circulation</th>
 													<th>parco-circolante-veicoli</th>
@@ -952,7 +1009,7 @@
 													<th><a href="http://www.aci.it/laci/studi-e-ricerche/dati-e-statistiche/open-data.html">ACI</a></th>
 													<th><a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS2.ttl">DS2.ttl</a></th>
 												</tr>
-												<tr>
+												<tr id="DS3">
 													<th>DS3</th>
 													<th>TPER Spa. Vehicle fleet - Number of urban vehicles by fuel - historical series</th>
 													<th>X</th>
@@ -971,7 +1028,7 @@
 													<th>?</th>
 													<th><a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS3.ttl">DS3.ttl</a></th>
 												</tr>
-												<tr>
+												<tr id="DS4">
 													<th>DS4</th>
 													<th>TPER Spa. Number of passengers transported - Bologna area - historical series</th>
 													<th>X</th>
@@ -990,7 +1047,7 @@
 													<th>?</th>
 													<th><a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS4.ttl">DS4.ttl</a></th>
 												</tr>
-												<tr>
+												<tr id="DS5">
 													<th>DS5</th>
 													<th>Air quality detection</th>
 													<th>DS407</th>
@@ -1009,7 +1066,7 @@
 													<th><a href="https://www.amat-mi.it/it/agenzia/rapporto-qualita-aria">AMAT</a></th>
 													<th><a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS5-1.ttl">DS5_1.ttl</a>, <a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS5-2.ttl">DS5_2.ttl</a>, <a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS5-3.ttl">DS5_3.ttl</a>, <a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS5-4.ttl">DS5_4.ttl</a>, <a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS5-5.ttl">DS5_5.ttl</a>, <a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS5-6.ttl">DS5_6.ttl</a>, <a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS5-7.ttl">DS5_7.ttl</a>, <a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS5-8.ttl">DS5_8.ttl</a></th>
 												</tr>
-												<tr>
+												<tr id="DS6">
 													<th>DS6</th>
 													<th>Low emission buses used for local public transport - indicator per 100 buses and absolute value - Historical series</th>
 													<th>DS1570</th>
@@ -1028,7 +1085,7 @@
 													<th><a href="https://www.istat.it/it/archivio/244648">ISTAT</a></th>
 													<th><a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS6.ttl">DS6.ttl</a></th>
 												</tr>
-												<tr>
+												<tr id="DS7">
 													<th>DS7</th>
 													<th>Buses used for local public transport by emission class - Percentage composition - Historical series</th>
 													<th>DS1568</th>
@@ -1047,7 +1104,7 @@
 													<th><a href="https://www.istat.it/it/archivio/244648">ISTAT</a></th>
 													<th><a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS7.ttl">DS7.ttl</a></th>
 												</tr>
-												<tr>
+												<tr id="DS8">
 													<th>DS8</th>
 													<th>TPL demand - Annual passengers per inhabitant - historical series</th>
 													<th>DS1547</th>
@@ -1066,7 +1123,7 @@
 													<th><a href="https://www.istat.it/it/archivio/244648">ISTAT</a></th>
 													<th><a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/DS8.ttl">DS8.ttl</a></th>
 												</tr>
-												<tr>
+												<tr id="DS9">
 													<th>DS9</th>
 													<th>Vehicle fleet 2004-2022</th>
 													<th>DS721</th>
@@ -1114,7 +1171,7 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
+												<tr id="MD1">
 													<th>MD1</th>
 													<th>MD1 - air quality and vehicle data for Bologna (2017-2024)</th>
 													<th>MD1</th>
@@ -1133,7 +1190,7 @@
 													<th>CC-BY-SA 4.0</th>
 													<th><a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/MD1.ttl">MD1.ttl</a></th>
 												</tr>
-												<tr>
+												<tr id="MD2">
 													<th>MD2</th>
 													<th>MD2 - air quality and vehicle data for Milan (2017-2024)</th>
 													<th>MD2</th>
@@ -1152,7 +1209,7 @@
 													<th>CC-BY-SA 4.0</th>
 													<th><a href="https://github.com/krzywonos/oade-vroom/blob/54d8cd853c7cb502ef7a916470b7bc40544c96d5/rdf/MD2.ttl">MD2.ttl</a></th>
 												</tr>
-												<tr>
+												<tr id="MDS1_2">
 													<th>MDS1_2</th>
 													<th>MDS1_2 - air quality and vehicle registration data per CAP for Bologna (2019-2024)</th>
 													<th>MDS1_2</th>
